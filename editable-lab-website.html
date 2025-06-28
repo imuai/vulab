@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respiratory Immunology Research Lab - Luan D. Vu, Ph.D.</title>
+    
+    <!-- 
+    ========================================
+    EASY EDIT SECTION - CHANGE YOUR CONTENT HERE
+    ========================================
+    -->
+    <script>
+    // WEBSITE CONTENT - Edit these sections with your information
+    
+    const SITE_DATA = {
+        // LAB INFORMATION
+        labName: "Respiratory Immunology Research Lab",
+        university: "University of Texas at San Antonio",
+        department: "Department of Molecular Microbiology and Immunology",
+        labLogo: "lab-logo.png", // Add your lab logo file here
+        
+        // PRINCIPAL INVESTIGATOR
+        pi: {
+            name: "Luan D. Vu, Ph.D.",
+            title: "Assistant Professor",
+            email: "luan.vu@utsa.edu",
+            phone: "210-458-7086",
+            office: "Margaret Batts Tobin Laboratories - MBT 1.205",
+            photo: "luan-vu-photo.jpg", // Add your photo file name here
+            statement: `Performing scientific research is a privilege. Inspired by mentors Dr. Huong TQ Vu, Dr. Nicholas King, and Dr. Stephania Cormier, I have dedicated my career to unraveling viral pathogenesis and early-life immunity. Over two decades, every obstacle has sharpened my resolve; every breakthrough deepened my commitment—from tracing Seoul virus transmission to decoding Dengue’s neurological effects, culminating in pivotal insights on RSV and SARS-CoV-2. These discoveries reinforce my core belief: nurturing the next generation of scientists is as vital as the science itself.
+My lab tackles foundational questions: How does immunity begin? What early immune events dictate lifelong health? Using multi-omics tools, we dissect maternal-neonatal immunity while mentoring bold thinkers to confront these challenges with rigor and creativity.`
+            // Links
+            linkedin: "https://www.linkedin.com/in/luan-vu-61a30771/",
+            ncbi: "https://www.ncbi.nlm.nih.gov/myncbi/luan.vu%20dinh.1/bibliography/public/",
+            googleScholar: "https://scholar.google.com"
+        },
+        
+        // HOME PAGE CONTENT
+        welcomeText: `Led by Dr. Luan D. Vu, our laboratory at the University of Texas at San Antonio investigates the complex immune mechanisms underlying viral respiratory infections. We focus on understanding how viruses like Respiratory Syncytial Virus (RSV) and SARS-CoV-2 impact vulnerable populations, particularly infants and pregnant women.`,
+        
+        missionText: `Our mission is to uncover the fundamental immunological processes that drive disease severity and long-term respiratory health outcomes. Through cutting-edge research combining multi-omics approaches, advanced in vitro and in vivo models, we aim to develop innovative therapeutic strategies that will improve health outcomes and reduce the burden of respiratory diseases.`,
+        
+        // RESEARCH CONTENT
+        researchQuestions: [
+            "How do maternal immune responses, particularly elevated IL-10 levels, impact pregnancy and fetal outcomes during severe COVID-19?",
+            "What drives epithelial stem/progenitor cell expansion during alveolarization in response to neonatal RSV-induced IL-33 signaling?",
+            "How do early viral infections contribute to the development of long-term respiratory diseases?"
+        ],
+        
+        researchProjects: [
+            {
+                id: "project1",
+                title: "Viral Respiratory Immunopathogenesis",
+                shortDescription: "RSV and SARS-CoV-2 immune responses",
+                fullDescription: "Investigating immune responses to Respiratory Syncytial Virus (RSV) and SARS-CoV-2, addressing critical public health challenges through multi-omics approaches.",
+                diagram: "project1-diagram.png" // Add your diagram file
+            },
+            {
+                id: "project2",
+                title: "Vulnerable Populations",
+                shortDescription: "Infants and pregnant women studies",
+                fullDescription: "Focus on infants, pregnant women, and individuals with underlying conditions to reduce severe morbidity and mortality from respiratory infections.",
+                diagram: "project2-diagram.png"
+            },
+            {
+                id: "project3",
+                title: "Maternal and Infant Immunity",
+                shortDescription: "Maternal-fetal immune balance",
+                fullDescription: "Exploring how maternal immune responses balance pathogen control and maternal-fetal tolerance, and how infant immune responses shape lung development.",
+                diagram: "project3-diagram.png"
+            },
+            {
+                id: "project4",
+                title: "Early Life Exposures",
+                shortDescription: "Long-term respiratory disease",
+                fullDescription: "Studying how early viral infections during pregnancy and infancy predispose individuals to chronic respiratory diseases like asthma and COPD.",
+                diagram: "project4-diagram.png"
+            }
+        ],
+        
+        // TEAM MEMBERS
+        team: {
+            groupPhoto: "team-group-photo.jpg", // Add your group photo
+            members: [
+                {
+                    name: "Luan D. Vu, Ph.D.",
+                    position: "Principal Investigator",
+                    education: "Ph.D. Medical Sciences, University of Sydney",
+                    research: "Viral immunopathogenesis, respiratory infections",
+                    email: "luan.vu@utsa.edu",
+                    photo: "luan-vu-photo.jpg"
+                },
+                {
+                    name: "Team Member 2",
+                    position: "Postdoctoral Fellow",
+                    education: "Ph.D. Immunology",
+                    research: "T cell responses in viral infections",
+                    email: "member2@utsa.edu",
+                    photo: "member2-photo.jpg"
+                },
+                {
+                    name: "Team Member 3",
+                    position: "Graduate Student",
+                    education: "M.S. Candidate",
+                    research: "Maternal immunity",
+                    email: "member3@utsa.edu",
+                    photo: "member3-photo.jpg"
+                },
+                {
+                    name: "Team Member 4",
+                    position: "Graduate Student",
+                    education: "Ph.D. Candidate",
+                    research: "RSV pathogenesis",
+                    email: "member4@utsa.edu",
+                    photo: "member4-photo.jpg"
+                },
+                {
+                    name: "Team Member 5",
+                    position: "Research Technician",
+                    education: "B.S. Biology",
+                    research: "Laboratory management",
+                    email: "member5@utsa.edu",
+                    photo: "member5-photo.jpg"
+                },
+                {
+                    name: "Team Member 6",
+                    position: "Graduate Student",
+                    education: "Ph.D. Candidate",
+                    research: "Multi-omics analysis",
+                    email: "member6@utsa.edu",
+                    photo: "member6-photo.jpg"
+                },
+                {
+                    name: "Team Member 7",
+                    position: "Undergraduate Researcher",
+                    education: "B.S. Candidate",
+                    research: "Cell culture techniques",
+                    email: "member7@utsa.edu",
+                    photo: "member7-photo.jpg"
+                },
+                {
+                    name: "Team Member 8",
+                    position: "Research Associate",
+                    education: "M.S. Molecular Biology",
+                    research: "Viral genetics",
+                    email: "member8@utsa.edu",
+                    photo: "member8-photo.jpg"
+                }
+            ]
+        },
+        
+        // PUBLICATIONS
+        publications: [
+            {
+                title: "Recent Publication on RSV Immunopathogenesis",
+                journal: "Journal Name, 2024",
+                authors: "Vu LD, et al.",
+                doi: "10.1234/journal.2024.001"
+            },
+            {
+                title: "IL-10 Response in Maternal COVID-19 Infection",
+                journal: "Journal Name, 2024",
+                authors: "Vu LD, et al.",
+                doi: "10.1234/journal.2024.002"
+            },
+            {
+                title: "Neonatal Lung Development and Viral Infections",
+                journal: "Journal Name, 2023",
+                authors: "Vu LD, et al.",
+                doi: "10.1234/journal.2023.003"
+            }
+        ],
+        
+        // SHOWCASE DATA AND EQUIPMENT
+        showcase: {
+            data: [
+                {
+                    title: "Single-Cell RNA Sequencing of Infant Lung",
+                    description: "Revealing cellular heterogeneity during RSV infection",
+                    image: "showcase-scrna.png",
+                    caption: "UMAP visualization showing distinct cell populations"
+                },
+                {
+                    title: "3D Organoid Imaging",
+                    description: "Human lung organoids infected with SARS-CoV-2",
+                    image: "showcase-organoid.png",
+                    caption: "Confocal microscopy showing viral spread patterns"
+                },
+                {
+                    title: "Flow Cytometry Analysis",
+                    description: "T cell responses in maternal COVID-19",
+                    image: "showcase-flow.png",
+                    caption: "Multi-parameter flow cytometry data"
+                }
+            ],
+            equipment: [
+                {
+                    name: "BD FACSymphony A5",
+                    description: "30-parameter flow cytometry for deep immune profiling",
+                    image: "equipment-flow.jpg"
+                },
+                {
+                    name: "10x Genomics Chromium",
+                    description: "Single-cell RNA sequencing platform",
+                    image: "equipment-10x.jpg"
+                },
+                {
+                    name: "Zeiss LSM 980",
+                    description: "Confocal microscope with Airyscan 2",
+                    image: "equipment-confocal.jpg"
+                },
+                {
+                    name: "IncuCyte S3",
+                    description: "Live-cell imaging and analysis system",
+                    image: "equipment-incucyte.jpg"
+                }
+            ]
+        },
+        
+        // LAB ADDRESS
+        address: {
+            building: "Tobin Laboratory",
+            street: "One UTSA Circle",
+            city: "San Antonio",
+            state: "TX",
+            zip: "78249"
+        }
+    };
+    </script>
+    <!-- 
+    ========================================
+    END OF EASY EDIT SECTION
+    ========================================
+    -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f5f7fa;
+        }
+        
+        /* Sophisticated Header */
+        header {
+            background: linear-gradient(135deg, #1a252f 0%, #2c3e50 50%, #34495e 100%);
+            color: white;
+            padding: 2.5rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 50%;
+            height: 200%;
+            background: rgba(255,255,255,0.03);
+            transform: rotate(35deg);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .lab-logo {
+            width: 140px;
+            height: 140px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .lab-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .lab-logo img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+        }
+        
+        .header-text h1 {
+            font-size: 2.8rem;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header-text p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Sophisticated Navigation */
+        nav {
+            background: rgba(44, 62, 80, 0.98);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-tabs li {
+            margin: 0;
+        }
+        
+        .nav-tabs button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 1.2rem 1.8rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            position: relative;
+        }
+        
+        .nav-tabs button::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: #3498db;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-tabs button:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+        
+        .nav-tabs button:hover::after {
+            width: 80%;
+        }
+        
+        .nav-tabs button.active {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .nav-tabs button.active::after {
+            width: 100%;
+        }
+        
+        /* Content Area */
+        .content {
+            max-width: 1400px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+        
+        /* Sophisticated Cards */
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2c3e50);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+        }
+        
+        .card:hover::before {
+            opacity: 1;
+        }
+        
+        /* Profile Section */
+        .profile-section {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+        
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-info h2 {
+            color: #1a252f;
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+        
+        .profile-info h3 {
+            color: #3498db;
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Research Projects Grid */
+        .research-projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #3498db, #2c3e50, #3498db);
+            border-radius: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+        
+        .project-card:hover::before {
+            opacity: 1;
+        }
+        
+        .project-card h3 {
+            color: #1a252f;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .project-card p {
+            color: #5a6c7d;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* Modal for Project Details */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 3rem;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 20px;
+            position: relative;
+            animation: modalFadeIn 0.3s ease;
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: #333;
+        }
+        
+        .project-diagram {
+            width: 100%;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Team Section */
+        .team-group-photo {
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        
+        .team-group-photo img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2c3e50);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+        
+        .team-member:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            background: #f0f0f0;
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-member h3 {
+            color: #1a252f;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .team-member .position {
+            color: #3498db;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        
+        .team-member .details {
+            color: #5a6c7d;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        /* Showcase Section */
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .showcase-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .showcase-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+        
+        .showcase-image {
+            width: 100%;
+            height: 250px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .showcase-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .showcase-content {
+            padding: 1.5rem;
+        }
+        
+        .showcase-content h3 {
+            color: #1a252f;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .showcase-content p {
+            color: #5a6c7d;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Equipment Section */
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .equipment-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .equipment-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        
+        .equipment-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1rem;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .equipment-icon img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+        }
+        
+        /* Links and Buttons */
+        .links-section {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .link-button {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.3);
+        }
+        
+        .link-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(52, 152, 219, 0.4);
+            background: linear-gradient(135deg, #2980b9, #3498db);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 50%;
+            height: 200%;
+            background: rgba(255,255,255,0.03);
+            transform: rotate(-35deg);
+        }
+        
+        footer p {
+            position: relative;
+            z-index: 1;
+            margin: 0.5rem 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-text h1 {
+                font-size: 2rem;
+            }
+            
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-tabs {
+                flex-wrap: wrap;
+            }
+            
+            .nav-tabs button {
+                padding: 1rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            
+            .research-projects,
+            .team-grid,
+            .showcase-grid,
+            .equipment-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="lab-logo">
+                <img id="lab-logo-img" src="" alt="Lab Logo" style="display: none;">
+                <svg id="lab-logo-placeholder" viewBox="0 0 100 100" style="width: 90px; height: 90px;">
+                    <path d="M30 40 Q50 20 70 40 L70 60 Q50 80 30 60 Z" fill="#3498db" opacity="0.8"/>
+                    <path d="M35 45 Q50 30 65 45 L65 55 Q50 70 35 55 Z" fill="#2c3e50" opacity="0.6"/>
+                    <circle cx="40" cy="50" r="3" fill="#e74c3c"/>
+                    <circle cx="60" cy="48" r="3" fill="#e74c3c"/>
+                    <circle cx="50" cy="55" r="2" fill="#e74c3c"/>
+                </svg>
+            </div>
+            <div class="header-text">
+                <h1 id="lab-name"></h1>
+                <p id="university-name"></p>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-tabs">
+                <li><button class="tab-button active" onclick="showTab('home')">Home</button></li>
+                <li><button class="tab-button" onclick="showTab('research')">Research</button></li>
+                <li><button class="tab-button" onclick="showTab('team')">Team</button></li>
+                <li><button class="tab-button" onclick="showTab('publications')">Publications</button></li>
+                <li><button class="tab-button" onclick="showTab('showcase')">Discoveries & Tools</button></li>
+                <li><button class="tab-button" onclick="showTab('contact')">Contact</button></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <!-- Home Tab -->
+        <div id="home" class="tab-content active">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem;">Welcome to Our Laboratory</h2>
+                <p id="welcome-text" style="font-size: 1.15rem; line-height: 1.8; margin-top: 1rem; color: #5a6c7d;"></p>
+                <p id="mission-text" style="font-size: 1.15rem; line-height: 1.8; margin-top: 1rem; color: #5a6c7d;"></p>
+            </div>
+            
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img id="pi-photo" src="" alt="PI Photo" style="display: none;">
+                    <span id="photo-placeholder" style="color: #999;">Add Photo</span>
+                </div>
+                <div class="profile-info">
+                    <h2 id="pi-name"></h2>
+                    <h3 id="pi-title"></h3>
+                    <p id="pi-department" style="margin-bottom: 1rem; color: #5a6c7d;"></p>
+                    <div class="contact-info" style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px;">
+                        <p><strong>Phone:</strong> <span id="pi-phone"></span></p>
+                        <p><strong>Email:</strong> <span id="pi-email"></span></p>
+                        <p><strong>Office:</strong> <span id="pi-office"></span></p>
+                    </div>
+                    <div class="links-section" id="pi-links"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Research Tab -->
+        <div id="research" class="tab-content">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem;">Research Focus</h2>
+                <p style="font-size: 1.15rem; margin-bottom: 2rem; color: #5a6c7d;">
+                    Our laboratory employs cutting-edge immunological and multi-omics approaches to study early-life immune responses and develop novel therapeutic strategies for respiratory viral infections.
+                </p>
+                
+                <h3 style="color: #1a252f; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 400;">Key Research Questions</h3>
+                <ol id="research-questions" style="margin-left: 2rem; line-height: 2; color: #5a6c7d;"></ol>
+            </div>
+            
+            <h3 style="text-align: center; margin: 3rem 0 2rem; font-size: 1.8rem; font-weight: 300; color: #1a252f;">Research Projects</h3>
+            <div class="research-projects" id="research-projects"></div>
+        </div>
+        
+        <!-- Team Tab -->
+        <div id="team" class="tab-content">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem;">Our Research Team</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.15rem; color: #5a6c7d;">
+                    We are dedicated to training the next generation of scientists through outstanding mentorship for graduate students and postdocs.
+                </p>
+                
+                <div class="team-group-photo">
+                    <img id="team-group-img" src="" alt="Team Group Photo" style="display: none;">
+                    <div id="group-photo-placeholder" style="background: #f0f0f0; height: 400px; display: flex; align-items: center; justify-content: center; color: #999;">
+                        Add Group Photo
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="text-align: center; margin: 3rem 0 2rem; font-size: 1.8rem; font-weight: 300; color: #1a252f;">Team Members</h3>
+            <div class="team-grid" id="team-members"></div>
+            
+            <div class="card" style="margin-top: 3rem; text-align: center;">
+                <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">Join Our Team</h3>
+                <p style="font-size: 1.1rem; color: #5a6c7d;">
+                    We are always looking for passionate and dedicated researchers to join our team. If you are interested in viral immunology and want to make a difference in understanding respiratory diseases, please contact Dr. Vu directly.
+                </p>
+                <a href="mailto:luan.vu@utsa.edu" class="link-button" style="margin-top: 1.5rem;">Contact Us About Opportunities</a>
+            </div>
+        </div>
+        
+        <!-- Publications Tab -->
+        <div id="publications" class="tab-content">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem;">Selected Publications</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.15rem; color: #5a6c7d;">
+                    Our research has been featured in leading journals and recognized for its significant contributions to the field of respiratory immunology.
+                </p>
+                
+                <ul class="publications-list" id="publications-list" style="list-style: none; padding: 0;"></ul>
+                
+                <div style="margin-top: 3rem; text-align: center;">
+                    <a id="publications-link" href="#" class="link-button" target="_blank">
+                        View Complete Publication List
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Showcase Tab (renamed from Resources) -->
+        <div id="showcase" class="tab-content">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem;">Discoveries & Research Tools</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.15rem; color: #5a6c7d;">
+                    Explore our groundbreaking discoveries and the state-of-the-art equipment that makes our research possible.
+                </p>
+            </div>
+            
+            <h3 style="text-align: center; margin: 3rem 0 2rem; font-size: 1.8rem; font-weight: 300; color: #1a252f;">Featured Discoveries</h3>
+            <div class="showcase-grid" id="showcase-data"></div>
+            
+            <h3 style="text-align: center; margin: 4rem 0 2rem; font-size: 1.8rem; font-weight: 300; color: #1a252f;">Research Equipment</h3>
+            <div class="equipment-grid" id="equipment-list"></div>
+            
+            <div class="card" style="margin-top: 3rem; text-align: center; background: linear-gradient(135deg, #f5f7fa 0%, #e3e7ed 100%);">
+                <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">Funding & Recognition</h3>
+                <ul style="list-style: none; padding: 0; line-height: 2; font-size: 1.1rem; color: #5a6c7d;">
+                    <li>• Parker B. Francis Fellowship Recipient</li>
+                    <li>• Research featured as highlights in leading journals</li>
+                    <li>• Multi-institutional collaborative grants</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Contact Tab -->
+        <div id="contact" class="tab-content">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 2rem;">Contact Information</h2>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
+                    <div>
+                        <h3 style="font-size: 1.6rem; margin-bottom: 1.5rem; font-weight: 400;">Principal Investigator</h3>
+                        <div id="contact-pi-info"></div>
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-size: 1.6rem; margin-bottom: 1.5rem; font-weight: 400;">Laboratory Location</h3>
+                        <div id="lab-address"></div>
+                        
+                        <div style="margin-top: 2rem;">
+                            <h4 style="font-size: 1.2rem; margin-bottom: 1rem;">For Prospective Students and Postdocs:</h4>
+                            <p style="color: #5a6c7d;">Please send your CV and a brief statement of research interests to Dr. Vu.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="mailto:luan.vu@utsa.edu" class="link-button">Send Email</a>
+                    <a href="https://www.utsa.edu/" class="link-button" target="_blank">Visit UTSA</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title" style="font-size: 2rem; margin-bottom: 1rem;"></h2>
+            <p id="modal-description" style="font-size: 1.1rem; line-height: 1.8; color: #5a6c7d;"></p>
+            <img id="modal-diagram" class="project-diagram" src="" alt="Project Diagram" style="display: none;">
+            <div id="diagram-placeholder" style="background: #f0f0f0; height: 400px; display: flex; align-items: center; justify-content: center; color: #999; border-radius: 10px; margin: 2rem 0;">
+                Diagram will appear here
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p style="font-size: 1.1rem;">&copy; 2024 <span id="footer-lab-name"></span></p>
+        <p><span id="footer-university"></span></p>
+    </footer>
+    
+    <script>
+        // Populate the website with data from SITE_DATA
+        function populateWebsite() {
+            // Header
+            document.getElementById('lab-name').textContent = SITE_DATA.labName;
+            document.getElementById('university-name').textContent = SITE_DATA.university;
+            
+            // Lab Logo
+            if (SITE_DATA.labLogo && SITE_DATA.labLogo !== "lab-logo.png") {
+                document.getElementById('lab-logo-img').src = SITE_DATA.labLogo;
+                document.getElementById('lab-logo-img').style.display = 'block';
+                document.getElementById('lab-logo-placeholder').style.display = 'none';
+            }
+            
+            // Home page
+            document.getElementById('welcome-text').textContent = SITE_DATA.welcomeText;
+            document.getElementById('mission-text').textContent = SITE_DATA.missionText;
+            document.getElementById('pi-name').textContent = SITE_DATA.pi.name;
+            document.getElementById('pi-title').textContent = SITE_DATA.pi.title;
+            document.getElementById('pi-department').textContent = SITE_DATA.department;
+            document.getElementById('pi-phone').textContent = SITE_DATA.pi.phone;
+            document.getElementById('pi-email').textContent = SITE_DATA.pi.email;
+            document.getElementById('pi-office').textContent = SITE_DATA.pi.office;
+            
+            // PI Photo
+            if (SITE_DATA.pi.photo && SITE_DATA.pi.photo !== "luan-vu-photo.jpg") {
+                document.getElementById('pi-photo').src = SITE_DATA.pi.photo;
+                document.getElementById('pi-photo').style.display = 'block';
+                document.getElementById('photo-placeholder').style.display = 'none';
+            }
+            
+            // PI Links
+            const linksHtml = `
+                <a href="${SITE_DATA.pi.linkedin}" class="link-button" target="_blank">LinkedIn</a>
+                <a href="${SITE_DATA.pi.ncbi}" class="link-button" target="_blank">NCBI Bibliography</a>
+                <a href="${SITE_DATA.pi.googleScholar}" class="link-button" target="_blank">Google Scholar</a>
+            `;
+            document.getElementById('pi-links').innerHTML = linksHtml;
+            
+            // Research questions
+            const questionsHtml = SITE_DATA.researchQuestions.map(q => `<li>${q}</li>`).join('');
+            document.getElementById('research-questions').innerHTML = questionsHtml;
+            
+            // Research projects
+            const projectsHtml = SITE_DATA.researchProjects.map(project => `
+                <div class="project-card" onclick="showProject('${project.id}')">
+                    <h3>${project.title}</h3>
+                    <p>${project.shortDescription}</p>
+                </div>
+            `).join('');
+            document.getElementById('research-projects').innerHTML = projectsHtml;
+            
+            // Team group photo
+            if (SITE_DATA.team.groupPhoto && SITE_DATA.team.groupPhoto !== "team-group-photo.jpg") {
+                document.getElementById('team-group-img').src = SITE_DATA.team.groupPhoto;
+                document.getElementById('team-group-img').style.display = 'block';
+                document.getElementById('group-photo-placeholder').style.display = 'none';
+            }
+            
+            // Team members
+            const teamHtml = SITE_DATA.team.members.map(member => `
+                <div class="team-member">
+                    <div class="member-photo">
+                        ${member.photo && member.photo !== member.photo.split('-')[0] + '-photo.jpg' 
+                            ? `<img src="${member.photo}" alt="${member.name}">` 
+                            : `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #999;">Photo</div>`}
+                    </div>
+                    <h3>${member.name}</h3>
+                    <p class="position">${member.position}</p>
+                    <div class="details">
+                        <p><strong>Education:</strong> ${member.education}</p>
+                        <p><strong>Research:</strong> ${member.research}</p>
+                        <p><strong>Email:</strong> ${member.email}</p>
+                    </div>
+                </div>
+            `).join('');
+            document.getElementById('team-members').innerHTML = teamHtml;
+            
+            // Publications
+            const pubsHtml = SITE_DATA.publications.map(pub => `
+                <li style="margin-bottom: 2rem; padding: 1.5rem; background: #f8f9fa; border-left: 4px solid #3498db; border-radius: 8px;">
+                    <strong style="font-size: 1.1rem; color: #1a252f;">${pub.title}</strong><br>
+                    <em style="color: #5a6c7d;">${pub.journal}</em><br>
+                    <span style="color: #666;">Authors: ${pub.authors}</span>
+                    ${pub.doi ? `<br><a href="https://doi.org/${pub.doi}" target="_blank" style="color: #3498db; text-decoration: none;">DOI: ${pub.doi}</a>` : ''}
+                </li>
+            `).join('');
+            document.getElementById('publications-list').innerHTML = pubsHtml;
+            document.getElementById('publications-link').href = SITE_DATA.pi.ncbi;
+            
+            // Showcase data
+            const showcaseHtml = SITE_DATA.showcase.data.map(item => `
+                <div class="showcase-item">
+                    <div class="showcase-image">
+                        ${item.image 
+                            ? `<img src="${item.image}" alt="${item.title}">` 
+                            : `<div style="color: #999;">Add Image</div>`}
+                    </div>
+                    <div class="showcase-content">
+                        <h3>${item.title}</h3>
+                        <p>${item.description}</p>
+                        <p style="font-size: 0.9rem; color: #888; margin-top: 0.5rem; font-style: italic;">${item.caption}</p>
+                    </div>
+                </div>
+            `).join('');
+            document.getElementById('showcase-data').innerHTML = showcaseHtml;
+            
+            // Equipment
+            const equipmentHtml = SITE_DATA.showcase.equipment.map(item => `
+                <div class="equipment-item">
+                    <div class="equipment-icon">
+                        ${item.image 
+                            ? `<img src="${item.image}" alt="${item.name}">` 
+                            : `<svg viewBox="0 0 100 100" style="width: 50px; height: 50px;">
+                                <rect x="20" y="30" width="60" height="40" fill="#3498db" opacity="0.8"/>
+                                <circle cx="35" cy="50" r="8" fill="#2c3e50"/>
+                                <circle cx="65" cy="50" r="8" fill="#2c3e50"/>
+                               </svg>`}
+                    </div>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #1a252f;">${item.name}</h4>
+                    <p style="font-size: 0.95rem; color: #5a6c7d;">${item.description}</p>
+                </div>
+            `).join('');
+            document.getElementById('equipment-list').innerHTML = equipmentHtml;
+            
+            // Contact page
+            const contactHtml = `
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    <strong>${SITE_DATA.pi.name}</strong><br>
+                    ${SITE_DATA.pi.title}<br>
+                    ${SITE_DATA.department}<br>
+                    ${SITE_DATA.university}
+                </p>
+                <div style="margin-top: 1.5rem; background: #f8f9fa; padding: 1.5rem; border-radius: 10px;">
+                    <p><strong>Email:</strong> ${SITE_DATA.pi.email}</p>
+                    <p><strong>Phone:</strong> ${SITE_DATA.pi.phone}</p>
+                    <p><strong>Office:</strong> ${SITE_DATA.pi.office}</p>
+                </div>
+            `;
+            document.getElementById('contact-pi-info').innerHTML = contactHtml;
+            
+            const addressHtml = `
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    ${SITE_DATA.address.building}<br>
+                    ${SITE_DATA.department}<br>
+                    ${SITE_DATA.university}<br>
+                    ${SITE_DATA.address.street}<br>
+                    ${SITE_DATA.address.city}, ${SITE_DATA.address.state} ${SITE_DATA.address.zip}
+                </p>
+            `;
+            document.getElementById('lab-address').innerHTML = addressHtml;
+            
+            // Footer
+            document.getElementById('footer-lab-name').textContent = SITE_DATA.labName;
+            document.getElementById('footer-university').textContent = SITE_DATA.university;
+        }
+        
+        // Tab switching function
+        function showTab(tabName) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        // Show project modal
+        function showProject(projectId) {
+            const project = SITE_DATA.researchProjects.find(p => p.id === projectId);
+            if (project) {
+                document.getElementById('modal-title').textContent = project.title;
+                document.getElementById('modal-description').textContent = project.fullDescription;
+                
+                if (project.diagram && project.diagram !== project.id + '-diagram.png') {
+                    document.getElementById('modal-diagram').src = project.diagram;
+                    document.getElementById('modal-diagram').style.display = 'block';
+                    document.getElementById('diagram-placeholder').style.display = 'none';
+                } else {
+                    document.getElementById('modal-diagram').style.display = 'none';
+                    document.getElementById('diagram-placeholder').style.display = 'flex';
+                }
+                
+                document.getElementById('projectModal').style.display = 'block';
+            }
+        }
+        
+        // Close modal
+        function closeModal() {
+            document.getElementById('projectModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('projectModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+        // Initialize the website
+        populateWebsite();
+    </script>
+</body>
+</html>

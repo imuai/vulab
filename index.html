@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respiratory Immunology Research Lab - Luan D. Vu, Ph.D.</title>
+    
+    <!-- 
+    ========================================
+    EASY EDIT SECTION - CHANGE YOUR CONTENT HERE
+    ========================================
+    -->
+    <script>
+    // WEBSITE CONTENT - Edit these sections with your information
+    
+    const SITE_DATA = {
+        // LAB INFORMATION
+        labName: "Respiratory Immunology Research Lab",
+        university: "University of Texas at San Antonio - UTSA",
+        department: "Department of Molecular Microbiology and Immunology - MMI",
+        labLogo: "rirl.png", // Add your lab logo file here
+        
+        // PRINCIPAL INVESTIGATOR
+        pi: {
+            name: "Luan D. Vu, Ph.D.",
+            title: "Assistant Professor",
+            email: "luan.vu@utsa.edu",
+            phone: "210-458-7086",
+            office: "Margaret Batts Tobin Laboratories - MBT 1205",
+            photo: "luan-photo.jpg", // Add your photo file name here
+            
+            // Personal Statement
+            personalStatement: `<strong>Performing scientific research is a privilege.</strong> Inspired by mentors Dr. Huong TQ Vu, Dr. Nicholas King, and Dr. Stephania Cormier, I've dedicated my career to unraveling viral pathogenesis and early-life immunity. Over two decades, every obstacle has sharpened my resolve; every breakthrough deepened my commitment—from tracing Seoul virus transmission to decoding Dengue's neurological effects, culminating in pivotal insights on RSV and SARS-CoV-2. These discoveries reinforce my core belief: <strong>nurturing the next generation of scientists is as vital as the science itself.</strong><br><br><strong>`,
+
+            // Links
+            linkedin: "https://www.linkedin.com/in/luan-vu-61a30771/",
+            ncbi: "https://www.ncbi.nlm.nih.gov/myncbi/luan.vu%20dinh.1/bibliography/public/",
+            googleScholar: "https://scholar.google.com"
+        },
+        
+        // HOME PAGE CONTENT
+        welcomeText: `Led by Dr. Luan D. Vu, our laboratory at UTSA explores how viral infections like RSV and SARS-CoV-2 disrupt early-life immunity. We focus on the most vulnerable—infants and pregnant women—where the stakes are highest and the biology, most revealing.`,
+        missionText: `
+Our mission: decode the immune roots of disease severity and lifelong respiratory health. We ask:
+<ul style="margin: 0rem 0 0.5rem 2rem; line-height: 1.6;">
+  <li>How does early lung development shape immune defense against viruses?</li>
+  <li>What lasting impact do infant infections leave on the lungs?</li>
+</ul>
+With multi-omics, precision models, and relentless curiosity, we uncover maternal-neonatal immune interactions—and train the next generation to push the boundaries of discovery.
+`,
+        // RESEARCH CONTENT
+        researchQuestions: [
+        ],
+        
+        researchProjects: [
+            {
+                id: "project1",
+                title: "Trained Immunity in Infant ILC2s: Metabolic-Epigenetic Link to RSV Severity and Lifelong Asthma Risk",
+                shortDescription: "Investigating how RSV infection epigenetically reprograms innate immune cells to increase asthma susceptibility.",
+                fullDescription: `
+This project investigates how early-life RSV infection reprograms infant ILC2s via metabolic-epigenetic mechanisms to drive asthma susceptibility. Using paired infant biosamples and neonatal mouse models, we will:
+<ul style="margin: 0rem 0 0.5rem 2rem; line-height: 1.6;">
+    <li>Define KLRG1+ ILC2 clinical correlates</li>
+    <li>Dissect ILC2/OX40L-mediated Th2 priming</li>
+    <li>Target the SAM-H3K4me3 axis to prevent immune malprogramming</li>
+</ul>
+Our work bridges mechanistic discovery with therapeutic development for post-RSV asthma.`,
+                diagram: "Fig 1 KLRG1+ILC2 epigenetic.png" // Add your diagram file
+            },
+            {
+                id: "project2",
+                title: "Roles of RSV-induced ILC2s in Asthma Development",
+                shortDescription: "Deciphering how H3K4me2-mediated epigenetic changes in ILC2s drive persistent type 2 inflammation in asthma.",
+                fullDescription:`
+We investigate how histone modifications (H3K4me2) at key loci (<em>GATA3</em>, <em>RORα</em>, <em>IL-33R</em>) epigenetically reprogram ILC2s to sustain pathogenic cytokine production (IL-4/5/13). Using chromatin profiling and conditional knockouts, we aim to:
+<ul style="margin: 0rem 0 0.5rem 2rem; line-height: 1.6;">
+    <li>Map methylome dynamics during ILC2 activation</li>
+    <li>Identify druggable regulators of ILC2 epigenetic memory</li>
+    <li>Develop targeted therapies to reset maladaptive programming</li>
+</ul>
+<strong>Impact:</strong> Reveals novel mechanisms of asthma chronicity beyond Th2 cells.`,
+                diagram: "project2.png"
+            },
+            {
+                id: "project3",
+                title: "Role of Maternal IL-10 in COVID-19 Severity",
+                shortDescription: "Dual roles of IL-10 in balancing antiviral protection and fetal tolerance during respiratory infections.",
+                fullDescription:`
+We explore the IL-10 paradox in pregnancy—protective in moderate COVID-19 but permissive in severe disease. Our work:
+<ul style="margin: 0rem 0 0.5rem 2rem; line-height: 1.6;">
+    <li>Characterizes IL-10 sources (Tregs vs. Th2/ILC2s) across infection severities</li>
+    <li>Tests IL-10 receptor modulation in maternal-fetal viral transmission models</li>
+    <li>Links placental transcriptomic signatures to offspring lung outcomes</li>
+</ul>
+<strong>Translation:</strong> Guides timing of immunomodulators in pregnant patients.`,
+            
+                diagram: "Maternal IL10.png"
+            },
+            {
+                id: "project4",
+                title: "PM2.5 Exposure Impairs FcRn-mediated Transplacental Transfer of RSV Neutralizing Antibodies",
+                shortDescription: "How PM2.5 compromises placental RSV antibody transfer, increasing infant infection risk.",
+                fullDescription:`
+This project uncovers how air pollution particles impair FcRn-mediated transplacental transfer of RSV-neutralizing antibodies. Combining:
+<ul style="margin: 0rem 0 0.5rem 2rem; line-height: 1.6;">
+    <li>Human placental examination</li>
+    <li>PM2.5-exposed mouse model</li>
+</ul>
+<strong>Key Question:</strong> Can antioxidant interventions restore neonatal immunity in polluted environments?`,
+                diagram: "nFcR in transplacental antibody.png"
+            }
+        ],
+        
+        // TEAM MEMBERS
+        team: {
+            groupPhoto: "team-group-photo.jpg", // Add your group photo
+            members: [
+                {
+                    name: "Luan D. Vu, Ph.D.",
+                    position: "Principal Investigator",
+                    education: "Ph.D. Medical Sciences, University of Sydney",
+                    research: "Viral immunopathogenesis, Pulmonary Immunity",
+                    email: "luan.vu@utsa.edu",
+                    photo: "luan-photo - Copy.jpg",
+                    photoPosition: "center 5%"
+                },
+                {
+                    name: "Huyen Pham, Ph.D.",
+                    position: "Postdoctoral Fellow",
+                    education: "Ph.D. in Life Science",
+                    research: "Mitochondrial Regulation of Pulmonary Trained Immunity",
+                    email: "member2@utsa.edu",
+                    photo: "huyen-photo - Copy.jpg"
+                },
+                {
+                    name: "Afia Kwayie, B.S.",
+                    position: "Graduate Student",
+                    education: "Ph.D. Candidate",
+                    research: "RSV-assocaited Asthma",
+                    email: "afia.kwayie@utsa.edu",
+                    photo: "afia-photo.jpeg"
+                },
+                {
+                    name: "Theo Courteaux, M.S.",
+                    position: "Graduate Student",
+                    education: "Ph.D. Candidate",
+                    research: "Vagal Control of Pulmonary Immunity",
+                    email: "theo.courteaux@utsa.edu",
+                    photo: "theo-photo.png",
+                    photoPosition: "center 20%"
+                },
+                {
+                    name: "Natalie Djabarov, B.S.",
+                    position: "Research Asscociate",
+                    education: "B.S. Biology",
+                    research: "Nanobody Development",
+                    email: "natalie.djabarov@utsa.edu",
+                    photo: "natalie-phote.jpeg",
+                    photoPosition: "center 95%"
+                },
+                {
+                    name: "Violet Huang, M.S.",
+                    position: "Research Asscociate",
+                    education: "M.S.",
+                    research: "Nanobody Development",
+                    email: "violet.huang@utsa.edu",
+                    photo: "violet-photo.JPG",
+                    photoPosition: "center 40%"
+                },
+                {
+                    name: "Emma Jurkovac",
+                    position: "Undergraduate Researcher",
+                    education: "B.S. Candidate",
+                    research: "Human nose organoids (HNOs)",
+                    email: "emma.jurkovac@my.utsa.edu",
+                    photo: "emma-photo.jpeg"
+                },
+                {
+                    name: "Anh Phan, B.S.",
+                    position: "Lab Manager",
+                    education: "B.S. Molecular Biology",
+                    research: "neonatal mouse model of RSV infection",
+                    email: "anh.phan2@utsa.edu",
+                    photo: "anh-photo.jpeg",
+                    photoPosition: "center 20%"
+                }
+            ]
+        },
+        
+        // HONORS AND AWARDS
+        honorsAndAwards: {
+            honors: [
+                {
+                    title: "Panelist - Future Research Directions in Basic Science of Gestation and Parturition",
+                    organization: "NIEHS in Durham, USA",
+                    year: "Feb 2023",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Notable Young Investigators Recognition - NIH",
+                    organization: "American Journal of Respiratory Cell and Molecular Biology",
+                    year: "2022",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Current issue Highlights and Editorial selected Article",
+                    organization: "American Journal of Respiratory Cell and Molecular Biology",
+                    year: "2022",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Current issue Highlighted Article in the COVID-19 vaccine study",
+                    organization: "Experimental Biology and Medicine Journal",
+                    year: "2022",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Leading medical researchers on the front lines of the battle against COVID-19 in the United States",
+                    organization: "NAFSA: Association of International Educators, USA",
+                    year: "2021",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Current issue Highlights and Editorial selected Article",
+                    organization: "American Journal of Respiratory and Critical Care Medicine",
+                    year: "2019",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Selected Talks for Young Investigators",
+                    organization: "International Congress of Immunology",
+                    year: "2016",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Young investigator Award for Breakthrough Research",
+                    organization: "Annual Meeting of International Network of Pasteur Institution, France",
+                    year: "2015",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Selected Talks for Young Investigators",
+                    organization: "International Congress of Immunology",
+                    year: "2016",
+                    description: "To Luan D. Vu"
+                }
+            ],
+            awards: [
+                {
+                    title: "Parker B. Francis Fellowship in Pulmonary Research, 2024-2027",
+                    organization: "Parker B. Francis Foundation, United States",
+                    year: "2024",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Leveraging Innovation for Technology Transfer (LIFT2) Grant awardee",
+                    organization: "The Board of Supervisors of Louisiana State University and Agricultural and Mechanical College, 2020-2021, United States",
+                    year: "2020-2021",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Australian Awards Scholarship, 2012- 2016",
+                    organization: "School of Medicine – University of Sydney, Australia",
+                    year: "2012",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Japanese MEXT graduate Scholarship",
+                    organization: "Graduate School of Medicine – Hokkaido University, Japan",
+                    year: "2012",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Foundation Merieux Fellowship Awards, 2011",
+                    organization: "The London School of Hygiene and Tropical Medicine, WHO, France",
+                    year: "2011",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Australian Leadership Awards, 2010",
+                    organization: "Institute of Clinical Pathology and Medical Research - Westmead Hospital - University of Sydney, Australia.",
+                    year: "2010",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Japan Society for the Promotion of Science Fellowships",
+                    organization: "Graduate School of Medicine – Hokkaido University, Japan",
+                    year: "2009",
+                    description: "To Luan D. Vu"
+                },
+                {
+                    title: "Japan Society for the Promotion of Science Fellowships",
+                    organization: "Graduate School of Medicine – Hokkaido University, Japan",
+                    year: "2008",
+                    description: "To Luan D. Vu"
+                }
+                
+            ],
+            mediaCoverage: [
+                {
+                    title: "UTSA study aims to understand how RSV influences infant respiratory health",
+                    outlet: "UTSA website",
+                    type: "News Article",
+                    date: "September 23, 2024",
+                    description: "Brief description of the interview or news coverage",
+                    link: "https://www.utsa.edu/today/2024/09/story/RSV-influences-on-infant-respiratory-health.html"
+                },
+                {
+                    title: "“The Right Place at the Right Time”: Eight Former International Students and Scholars Working on the COVID-19 Front Lines",
+                    outlet: "NAFSA: Association of International Educators, USA",
+                    type: "News Article",
+                    date: "2021",
+                    description: "Brief description of the interview or news coverage",
+                    link: "https://www.nafsa.org/ie-magazine/2021/4/6/right-place-right-time-eight-former-international-students-and-scholars?fbclid=IwAR0VtXhN5v1wiBMQoL-igKiZGyiJdWDfKTAQvur_zNqzjlfKpyYfGTTJ6ik"
+                },
+                {
+                    title: "LSU professors and research fellow to create sensor to detect COVID-19",
+                    outlet: "Baton Rouge Proud Channel",
+                    type: "Interview",
+                    date: "Jan 22, 2021",
+                    description: "Brief description of the interview or news coverage",
+                    link: "https://www.brproud.com/news/local-news/lsu-professors-and-research-fellow-to-create-sensor-to-detect-covid-19/"
+                },
+                {
+                    title: "LSU researchers designing smartphone COVID-19 testing device",
+                    outlet: "Business Report",
+                    type: "Interview",
+                    date: "July 31, 2020",
+                    description: "Brief description of the interview or news coverage",
+                    link: "https://www.businessreport.com/newsletters/lsu-researchers-designing-smartphone-covid-19-testing-device"
+                },
+                {
+                    title: "LSU Coronavirus Testing Lab Supports 18 Louisiana Medical Facilities",
+                    outlet: "Lousiana State University Website",
+                    type: "Newsletter",
+                    date: "March 2020",
+                    description: "Brief description of the interview or news coverage",
+                    link: "https://www.lsu.edu/research/news/2020/0404-riverroadtestinglab.php?fbclid=IwAR07eAykCiAgH983QMn76-f-kER7Th25goh0QPioYkpEqBnqz1zvjIz4ZoA"
+                },
+                {
+                    title: "Jomar Life Research Prize Winner 2014",
+                    outlet: "Australasian Society for Immunology Newsletter",
+                    type: "Newsletter",
+                    date: "December 2015",
+                    description: "Brain resident memory CD8+T cell biology",
+                    link: "https://www.immunology.org.au/files/Newsletter_pdfs/ASI_Newsletter_December_2015.pdf"
+                }
+            ]
+        },
+        publications: [
+            {
+                title: "IL-1β Promotes Expansion of IL-33+ Lung Epithelial Stem Cells after Respiratory Syncytial Virus Infection during Infancy",
+                journal: "American Journal of Respiratory Cell and Molecular Biology, 2022, Current Issue Highlight and Editorial Topic",
+                authors: "Vu LD, et al.",
+                doi: "10.1165/rcmb.2021-0313OC"
+            },
+            {
+                title: "Elevated Levels of Type 2 Respiratory Innate Lymphoid Cells in Human Infants with Severe RSV Bronchiolitis",
+                journal: "American Journal of Respiratory and Critical Care Medicine, 2019, Current Issue Highlight and Editorial Topic",
+                authors: "Vu LD, et al.",
+                doi: "10.1164/rccm.201812-2366OC"
+            },
+            {
+                title: "Deficiency in ST2 signaling ameliorates RSV-associated pulmonary hypertension",
+                journal: "American Journal of Physiology-Heart and Circulatory Physiology, 2021",
+                authors: "Vu LD, et al.",
+                doi: "10.1152/ajpheart.00018.2021"
+            },
+            {
+                title: "Predicting severe COVID-19 using readily available admission indicators: SpO2/FiO2 ratio, comorbidity index, and gender",
+                journal: "Experimental Biology and Medicine, 2024",
+                authors: "Vu LD, et al.",
+                doi: "10.3389/ebm.2024.10193"
+            },
+            {
+                title: "Absence of antibody responses to SARS-CoV-2 N protein in COVID-19 vaccine breakthrough cases",
+                journal: "Experimental Biology and Medicine, 2022",
+                authors: "Vu LD, et al.",
+                doi: "10.1177/15353702221134097"
+            },
+            {
+                title: "Development of a smartphone-based biosensor device for detecting sars-cov-2 antigens in body fluids using localized surface plasmon resonance (lspr)",
+                journal: "US20230296603A1, 2023, Patent",
+                authors: "Vu LD, et al.",
+                doi: "https://patents.google.com/patent/US20230296603A1/en"
+            },
+            {
+                title: "The fungal microbiota modulate neonatal oxygen-induced lung injury",
+                journal: "US20230296603A1, 2023",
+                authors: "Isaac Martin, Mary Silverberg, Ahmed Abdelgawad, Kosuke Tanaka, Brian A. Halloran, Teodora Nicola, Erin D. Myers, Jay P. Desai, Catrina T. White, Ibrahim Karabayir, Oguz Akbilgic, Laura Tipton, Samuel J. Gentle, Namasivayam Ambalavanan, Brian M. Peters, Luan D. Vu, Viral G. Jain, Charitharth V. Lal, Stephania A. Cormier, Joseph F. Pierre, Tamás Jilling, Ajay J. Talati & Kent A. Willis",
+                doi: "10.1186/s40168-025-02032-x"
+            },
+        ],
+        
+        // SHOWCASE DATA AND EQUIPMENT
+        showcase: {
+            data: [
+                {
+                    title: "FlowSOME Reveals RSV-Induced IL-33 and Activated Caspase-1 Signatures in Neonatal Lungs.",
+                    description: "High-dimensional flow cytometry analyzed through FlowSOME clustering (k=50).",
+                    image: "flowsome.png",
+                    caption: "Luan D. Vu, David T Siefker, Dahui You, John P. DeVincenzo, Anh TQ. Phan, Stephania A. Cormier; IL-1β regulates IL-33 mediated T helper 2 (Th2)-biased immunopathophysiology following respiratory syncytial virus infection in an age-dependent and caspase-1 independent manner. J Immunol 1 May 2019; 202 (1_Supplement): 124.5. https://doi.org/10.4049/jimmunol.202.Supp.124.5"
+                },
+                {
+                    title: "Machine learning approaches for biomarker discovery to predict RSV severity in human infants.",
+                    description: "Unsupervised learning: Principal component (PC) analysis (PCA) of 13 continuous immune-related variables.",
+                    image: "pcr.png",
+                    caption: "Vu LD, Siefker D, Jones TL, You D, Taylor R, DeVincenzo J, Cormier SA. Elevated Levels of Type 2 Respiratory Innate Lymphoid Cells in Human Infants with Severe Respiratory Syncytial Virus Bronchiolitis. Am J Respir Crit Care Med. 2019 Dec 1;200(11):1414-1423. doi: 10.1164/rccm.201812-2366OC. PMID: 31237777; PMCID: PMC6884055."
+                },
+                {
+                    title: "Elevated Lung Resistence Following RSV Secondary Infection.",
+                    description: "Lung Function evaluated by Buxco FinePointe Resistance and Compliance.",
+                    image: "lung-resistence.png",
+                    caption: "Luan D. Vu, David T Siefker, Dahui You, John P. DeVincenzo, Anh TQ. Phan, Stephania A. Cormier; IL-1β regulates IL-33 mediated T helper 2 (Th2)-biased immunopathophysiology following respiratory syncytial virus infection in an age-dependent and caspase-1 independent manner. J Immunol 1 May 2019; 202 (1_Supplement): 124.5. https://doi.org/10.4049/jimmunol.202.Supp.124.5"
+                },
+                {
+                    title: "SpO2/FiO2 ratio at triage, total comorbidity burden (represented by Charlson Comorbidity Index), and gender were significantly associated with COVID-19 severity.",
+                    description: "The combined influence of CCI, SpO2/FiO2 ratio at triage and gender on the development of more severe COVID-19 using ordered logistic regression.",
+                    image: "predict.png",
+                    caption: "Vu LD, Christofferson RC, O'Neal HR Jr, Hamer D, Phan ATQ, Vance KM, Turner EA, Kumar A, Yola IM, Lim N, Ogden B, Cormier SA. Predicting severe COVID-19 using readily available admission indicators: SpO2/FiO2 ratio, comorbidity index, and gender. Exp Biol Med (Maywood). 2024 Nov 20;249:10193. doi: 10.3389/ebm.2024.10193. PMID: 39633683; PMCID: PMC11614601."
+                },
+                {
+                    title: "Elevated Mucus Production Following RSV Secondary Infection.",
+                    description: "Lung sections were stained with periodic acid-Schiff to observe mucus production.",
+                    image: "Lung Histology.png",
+                    caption: "Luan D. Vu, David T Siefker, Dahui You, John P. DeVincenzo, Anh TQ. Phan, Stephania A. Cormier; IL-1β regulates IL-33 mediated T helper 2 (Th2)-biased immunopathophysiology following respiratory syncytial virus infection in an age-dependent and caspase-1 independent manner. J Immunol 1 May 2019; 202 (1_Supplement): 124.5. https://doi.org/10.4049/jimmunol.202.Supp.124.5"
+                },
+                {
+                    title: "Absence of ST2 signaling prevented RSV-reinfected mice from developing pulmonary hypertension by suppressing NOS uncoupling",
+                    description: "Proposed pathobiological mechanism of RSV-associated pulmonary hypertension.",
+                    image: "ph.png",
+                    caption: "Vu LD, Saravia J, Jaligama S, Baboeram Panday RV, Sullivan RD, Mancarella S, Cormier SA, Kimura D. Deficiency in ST2 signaling ameliorates RSV-associated pulmonary hypertension. Am J Physiol Heart Circ Physiol. 2021 Aug 1;321(2):H309-H317. doi: 10.1152/ajpheart.00018.2021. Epub 2021 Jun 25. PMID: 34170196; PMCID: PMC8410119."
+                },
+                {
+                    title: "Absence of antibody responses to SARS-CoV-2 N protein in COVID-19 vaccine breakthrough cases.",
+                    description: "Study participants were stratified into groups according to their vaccination and infection status.  COVID-19 vaccine breakthrough patients exhibited robust neutralizing antibody responses but absent or delayed and muted antibody responses to the viral N protein",
+                    image: "neutralization.png",
+                    caption: "Vu LD, Wallace S, Phan AT, Christofferson RC, Turner E, Parker S, Elkind-Hirsch K, Landry D, Stansbury A, Rose R, Nolan DJ, Lamers SL, Hirezi M, Ogden B, Cormier SA. Absence of antibody responses to SARS-CoV-2 N protein in COVID-19 vaccine breakthrough cases. Exp Biol Med (Maywood). 2022 Nov;247(21):1923-1936. doi: 10.1177/15353702221134097. Epub 2022 Nov 19. PMID: 36408542; PMCID: PMC9679329."
+                },
+                {
+                    title: "Development of a smartphone-based biosensor device for detecting sars-cov-2 antigens in body fluids using localized surface plasmon resonance (lspr).",
+                    description: "a method comprises applying a body fluid sample to a metal surface of the nanostructure-based LSPR biosensor with linker, intermediate, and capture/probe antibodies.",
+                    image: "biosensor.png",
+                    caption: "US20230296603A1, 2023, Patent. Authors: Vu LD, et al. https://patents.google.com/patent/US20230296603A1/en"
+                },
+                {
+                    title: "IL-1β Augments IL-33 Expression at the Cellular Level.",
+                    description: "Dual in situ hybridization (ISH) for IL33 on neonatal lung sections.",
+                    image: "rnascope.png",
+                    caption: "Luan D. Vu, David T Siefker, Dahui You, John P. DeVincenzo, Anh TQ. Phan, Stephania A. Cormier; IL-1β regulates IL-33 mediated T helper 2 (Th2)-biased immunopathophysiology following respiratory syncytial virus infection in an age-dependent and caspase-1 independent manner. J Immunol 1 May 2019; 202 (1_Supplement): 124.5. https://doi.org/10.4049/jimmunol.202.Supp.124.5"
+                },
+            ],
+            equipment: [
+                {
+                    name: "Cytek Aurora spectral flow cytometer - 5 lasers",
+                    description: "64 + 3 channel APD detectors and Automated Sample Loader, enabling resolution of up to 40 unique fluorescence labels for deep immune profiling.",
+                    image: "aurora.png"
+                },
+                {
+                    name: "10x Genomics Single-Cell System",
+                    description: "Facilitates high-resolution RNA-seq and ATAC-seq for up to 10,000 cells per sample, enabling detailed profiling of cellular subpopulations in complex tissues.",
+                    image: "10x.png"
+                },
+                {
+                    name: "Tissue dissociator",
+                    description: "Single-cell Sequencing, Primary Cell Culture, Cell Sorting, Cell therapy, Flow Cytometry. Qucikly Prepare Single Cell Suspension from Frozen Tissue, for Mouse, Rat, Human Tissue.",
+                    image: "rwd-dissociator.jpg"
+                },
+                {
+                    name: "RNA/DNA automated extraction system",
+                    description: "A high-throughput nucleic acid extractor that uses magnetic bead technology to purify DNA and RNA from a wide range of sample types.",
+                    image: "extractor.jpg"
+                },
+                {
+                    name: "Element Biosciences AVITI DNA Sequencer",
+                    description: "A new sequencing system capable of generating up to 2 billion paired-end reads while offering high data quality.",
+                    image: "aviti.png"
+                },
+                {
+                    name: "Zeiss 710 NLO 2P System",
+                    description: "Live-cell imaging and confocal microscopy analysis system.",
+                    image: "Zeiss-LSM-710.png"
+                },
+                {
+                    name: "Nanostring Digital Spatial Profiler",
+                    description: "Enables simultaneous detection of up to 20,000 genes or 150 proteins in intact tissue sections, providing spatial context critical to understanding gene expression patterns.",
+                    image: "nano.png"
+                },
+                {
+                    name: "Buxco® FinePointe Resistance and Compliance",
+                    description: "Collect respiratory parameters in anesthetized animals.",
+                    image: "rc.jpg"
+                },
+                
+            ]
+        },
+        // LAB ACTIVITIES
+        activities: [
+            {
+            title: "Pacific Basin Consortium 2025",
+            date: "05/29/2025",
+            location: "Ho Chi Minh city, Viet Nam",
+            description: "PBC 2025 for Enviroment and Health International Conference.",
+            image: "20-IMG_2126.jpg"
+            },
+            {
+            title: "Pacific Basin Consortium 2025",
+            date: "05/30/2025",
+            location: "Ho Chi Minh city, Viet Nam",
+            description: "PBC 2025 for Enviroment and Health International Conference.",
+            image: "73-_MG_2100.jpg"
+            },
+            {
+            title: "Pacific Basin Consortium 2025",
+            date: "06/01/2025",
+            location: "Ho Chi Minh city, Viet Nam",
+            description: "PBC 2025 for Enviroment and Health International Conference.",
+            image: "5-IMG_2234.jpg"
+            },
+        ],
+        // LAB ADDRESS
+        address: {
+            building: "Margaret Batts Tobin Laboratories",
+            street: "One UTSA Circle",
+            city: "San Antonio",
+            state: "TX",
+            zip: "78249"
+        }
+    };
+    </script>
+    <!-- 
+    ========================================
+    END OF EASY EDIT SECTION
+    ========================================
+    -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f5f7fa;
+        }
+        
+        /* Sophisticated Header */
+        header {
+            background: linear-gradient(135deg, #1a252f 0%, #2c3e50 50%, #34495e 100%);
+            color: white;
+            padding: 2.5rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 50%;
+            height: 200%;
+            background: rgba(255,255,255,0.03);
+            transform: rotate(35deg);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .lab-logo {
+            width: 140px;
+            height: 140px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .lab-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .lab-logo img {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+            object-position: center top;
+
+        }
+        
+        .header-text h1 {
+            font-size: 2.8rem;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header-text p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Sophisticated Navigation */
+        nav {
+            background: rgba(44, 62, 80, 0.98);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-tabs li {
+            margin: 0;
+        }
+        
+        .nav-tabs button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 1.2rem 1.8rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            position: relative;
+        }
+        
+        .nav-tabs button::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: #3498db;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-tabs button:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+        
+        .nav-tabs button:hover::after {
+            width: 80%;
+        }
+        
+        .nav-tabs button.active {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .nav-tabs button.active::after {
+            width: 100%;
+        }
+        
+        /* Content Area */
+        .content {
+            max-width: 1400px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+        
+        /* Sophisticated Cards */
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2c3e50);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+        }
+        
+        .card:hover::before {
+            opacity: 1;
+        }
+        
+        /* Profile Section */
+        .profile-section {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+        
+        .profile-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-shrink: 0; /* Prevent image from shrinking */
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 8%;
+        }
+        
+        .profile-info {
+            flex: 1; /* Allow info section to take remaining space */
+            min-width: 0; /* Prevent overflow issues */
+        }
+        
+        .profile-info h2 {
+            color: #1a252f;
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Personal Statement Styling */
+        .personal-statement {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+            border-left: 4px solid #3498db;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #2c3e50;
+        }
+        
+        .personal-statement strong {
+            color: #1a252f;
+        }
+        
+        .personal-statement em {
+            color: #3498db;
+            font-style: italic;
+        }
+        
+        /* Research Projects Grid */
+        .research-projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #3498db, #2c3e50, #3498db);
+            border-radius: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+        
+        .project-card:hover::before {
+            opacity: 1;
+        }
+        
+        .project-card h3 {
+            color: #1a252f;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .project-card p {
+            color: #5a6c7d;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* Modal for Project Details */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 3rem;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 20px;
+            position: relative;
+            animation: modalFadeIn 0.3s ease;
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: #333;
+        }
+        
+        .project-diagram {
+            width: 100%;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Team Section */
+        .team-group-photo {
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        
+        .team-group-photo img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2c3e50);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+        
+        .team-member:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            background: #f0f0f0;
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-member h3 {
+            color: #1a252f;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .team-member .position {
+            color: #3498db;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        
+        .team-member .details {
+            color: #5a6c7d;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        /* Showcase Section */
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem 0;
+        }
+        
+        .showcase-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .showcase-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+        .showcase-image-container {
+            width: 100%;
+            height: 250px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        
+        .showcase-image {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            border-radius: 8px 8px 0 0;
+            margin-top: 0.2rem;
+            margin-left: 0.2rem;
+            margin-right: 0.5rem;
+            
+        }
+        
+        .showcase-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px 8px 0 0;
+            margin-top: 0.2rem;
+            margin-left: 0.2rem;
+            margin-right: 0.5rem;
+        }
+        
+        .showcase-content {
+            padding: 1.5rem;
+        }
+        
+        .showcase-content h3 {
+            color: #1a252f;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .showcase-content p {
+            color: #5a6c7d;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Equipment Section */
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .equipment-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .equipment-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        
+        .equipment-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1rem;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .equipment-icon img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+        }
+        
+        /* Honors and Awards Section */
+        .honors-awards-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .honors-section, .awards-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+        }
+        
+        .honors-section h3, .awards-section h3 {
+            color: #1a252f;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 400;
+        }
+        
+        .honor-item, .award-item {
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            transition: all 0.3s ease;
+        }
+        
+        .honor-item:hover, .award-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left-color: #2c3e50;
+        }
+        
+        .honor-item:last-child, .award-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .honor-title, .award-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a252f;
+            margin-bottom: 0.5rem;
+        }
+        
+        .honor-organization, .award-organization {
+            font-size: 1rem;
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .honor-year, .award-year {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .honor-description, .award-description {
+            font-size: 0.95rem;
+            color: #5a6c7d;
+            line-height: 1.6;
+        }
+        
+        /* Media Coverage Section */
+        .media-coverage-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            margin-top: 2rem;
+        }
+        
+        .media-coverage-section h3 {
+            color: #1a252f;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 400;
+        }
+        
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .media-item {
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f4f8 100%);
+            border-radius: 12px;
+            border-left: 4px solid #e74c3c;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .media-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            border-left-color: #c0392b;
+        }
+        
+        .media-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background: rgba(231, 76, 60, 0.1);
+            border-radius: 0 0 0 60px;
+        }
+        
+        .media-type {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .media-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a252f;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .media-outlet {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .media-date {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .media-description {
+            font-size: 0.95rem;
+            color: #5a6c7d;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .media-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(231, 76, 60, 0.3);
+        }
+        
+        .media-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+            background: linear-gradient(135deg, #c0392b, #e74c3c);
+        }
+        .links-section {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .link-button {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.3);
+        }
+        
+        .link-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(52, 152, 219, 0.4);
+            background: linear-gradient(135deg, #2980b9, #3498db);
+        }
+        /* Activities Grid */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .activity-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+
+        .activity-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .activity-content {
+            padding: 1.5rem;
+        }
+
+        .activity-date {
+            font-size: 0.9rem;
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .activity-location {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .activity-location svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            fill: currentColor;
+        }
+
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 50%;
+            height: 200%;
+            background: rgba(255,255,255,0.03);
+            transform: rotate(-35deg);
+        }
+        
+        footer p {
+            position: relative;
+            z-index: 1;
+            margin: 0.5rem 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-text h1 {
+                font-size: 2rem;
+            }
+            
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-tabs {
+                flex-wrap: wrap;
+            }
+            
+            .nav-tabs button {
+                padding: 1rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            
+            .research-projects,
+            .team-grid,
+            .showcase-grid,
+            .equipment-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .honors-awards-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="lab-logo">
+                <img id="lab-logo-img" src="" alt="Lab Logo" style="display: none;">
+                <svg id="lab-logo-placeholder" viewBox="0 0 100 100" style="width: 150px; height: 150px;">
+                    <path d="M30 40 Q50 20 70 40 L70 60 Q50 80 30 60 Z" fill="#3498db" opacity="0.8"/>
+                    <path d="M35 45 Q50 30 65 45 L65 55 Q50 70 35 55 Z" fill="#2c3e50" opacity="0.6"/>
+                    <circle cx="40" cy="50" r="3" fill="#e74c3c"/>
+                    <circle cx="60" cy="48" r="3" fill="#e74c3c"/>
+                    <circle cx="50" cy="55" r="2" fill="#e74c3c"/>
+                </svg>
+            </div>
+            <div class="header-text">
+                <h1 id="lab-name"></h1>
+                <p id="department-name"></p>
+                <p id="university-name"></p>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-tabs">
+                <li><button class="tab-button active" onclick="showTab('home')">Home</button></li>
+                <li><button class="tab-button" onclick="showTab('research')">Research</button></li>
+                <li><button class="tab-button" onclick="showTab('team')">Team</button></li>
+                <li><button class="tab-button" onclick="showTab('publications')">Publications</button></li>
+                <li><button class="tab-button" onclick="showTab('showcase')">Discoveries & Tools</button></li>
+                <li><button class="tab-button" onclick="showTab('honors')">Honors & Awards</button></li>
+                <li><button class="tab-button" onclick="showTab('activities')">Lab Activities</button></li>
+                <li><button class="tab-button" onclick="showTab('contact')">Contact</button></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <!-- Home Tab -->
+        <div id="home" class="tab-content active">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem;">Welcome to Our Laboratory</h2>
+                <p id="welcome-text" style="font-size: 1.15rem; line-height: 1.8; margin-top: 1rem; color: #5a6c7d;"></p>
+                <p id="mission-text" style="font-size: 1.15rem; line-height: 1.8; color: #5a6c7d;"></p>
+            </div>
+            
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img id="pi-photo" src="" alt="PI Photo" style="display: none;">
+                    <span id="photo-placeholder" style="color: #999;">Add Photo</span>
+                </div>
+                <div class="profile-info">
+                    <h2 id="pi-name"></h2>
+                    <div class="personal-statement" id="personal-statement"></div>
+                    <div class="links-section" id="pi-links"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Research Tab -->
+        <div id="research" class="tab-content">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem;">Current Research Focus</h2>
+                <p style="font-size: 1.45rem; margin-bottom: 2rem; color: #5a6c7d;">
+                    Our laboratory employs cutting-edge immunological and multi-omics approaches to study early-life immune responses and develop novel therapeutic strategies for respiratory viral infections.
+                </p>
+                
+                <h3 style="color: #1a252f; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 350;">Key Research Questions</h3>
+                <ol id="research-questions" style="margin-left: 2rem; line-height: 2; color: #5a6c7d;"></ol>
+                <div style="display: flex; justify-content: center; margin: 2rem 0 3rem 0;">
+                    <div style="max-width: 800px; width: 100%;">
+                        <img src="research-question.png" 
+                            alt="Developmental origins of respiratory disease"
+                            style="width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+
+            </div>
+            
+            <h3 style="text-align: center; margin: 3rem 0 2rem; font-size: 1.8rem; font-weight: 300; color: #1a252f;">Research Projects</h3>
+            <div class="research-projects" id="research-projects"></div>
+        </div>
+        
+        <!-- Team Tab -->
+        <div id="team" class="tab-content">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem;">Our Research Team</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.15rem; color: #5a6c7d;">
+                    We are dedicated to training the next generation of scientists through outstanding mentorship for graduate students and postdocs.
+                </p>
+                
+                <div class="team-group-photo">
+                    <img id="team-group-img" src="" alt="Team Group Photo" style="display: none;">
+                    <div id="group-photo-placeholder" style="background: #f0f0f0; height: 400px; display: flex; align-items: center; justify-content: center; color: #999;">
+                        Add Group Photo
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="text-align: center; margin: 3rem 0 2rem; font-size: 1.8rem; font-weight: 300; color: #1a252f;">Team Members</h3>
+            <div class="team-grid" id="team-members"></div>
+            
+            <div class="card" style="margin-top: 3rem; text-align: center;">
+                <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">Join Our Team</h3>
+                <p style="font-size: 1.1rem; color: #5a6c7d;">
+                    We are always looking for passionate and dedicated researchers to join our team. If you are interested in viral immunology and want to make a difference in understanding respiratory diseases, please contact Dr. Vu directly.
+                </p>
+                <a href="mailto:luan.vu@utsa.edu" class="link-button" style="margin-top: 1.5rem;">Contact Us About Opportunities</a>
+            </div>
+        </div>
+        
+        <!-- Publications Tab -->
+        <div id="publications" class="tab-content">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem;">Selected Publications</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.15rem; color: #5a6c7d;">
+                    Our research has been featured in leading journals and recognized for its significant contributions to the field of respiratory immunology.
+                </p>
+                
+                <ul class="publications-list" id="publications-list" style="list-style: none; padding: 0;"></ul>
+                
+                <div style="margin-top: 3rem; text-align: center;">
+                    <a id="publications-link" href="#" class="link-button" target="_blank">
+                        View Complete Publication List
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Showcase Tab (renamed from Resources) -->
+        <div id="showcase" class="tab-content">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem;">Discoveries & Research Tools</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.15rem; color: #5a6c7d;">
+                    Explore our groundbreaking discoveries and the state-of-the-art equipment that makes our research possible.
+                </p>
+            </div>
+            
+            <h3 style="text-align: center; margin: 3rem 0 2rem; font-size: 1.8rem; font-weight: 300; color: #1a252f;">Featured Discoveries</h3>
+            <div class="showcase-grid" id="showcase-data"></div>
+            
+            <h3 style="text-align: center; margin: 4rem 0 2rem; font-size: 1.8rem; font-weight: 300; color: #1a252f;">Research Equipment</h3>
+            <div class="equipment-grid" id="equipment-list"></div>
+        </div>
+        
+        <!-- Honors & Awards Tab -->
+        <div id="honors" class="tab-content">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem;">Honors & Awards</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.15rem; color: #5a6c7d;">
+                    Recognition for outstanding contributions to respiratory immunology research and scientific excellence.
+                </p>
+                
+                <div class="honors-awards-grid">
+                    <div class="honors-section">
+                        <h3>Honors</h3>
+                        <div id="honors-list"></div>
+                    </div>
+                    
+                    <div class="awards-section">
+                        <h3>Awards</h3>
+                        <div id="awards-list"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="media-coverage-section">
+                <h3>Media Coverage & Interviews</h3>
+                <p style="text-align: center; color: #5a6c7d; margin-bottom: 2rem; font-size: 1.1rem;">
+                    Featured interviews, news articles, and media appearances highlighting our research impact.
+                </p>
+                <div class="media-grid" id="media-coverage-list"></div>
+            </div>
+        </div>
+        
+        <!-- Showcase Tab (renamed from Resources) -->
+        <div id="showcase" class="tab-content">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem;">Discoveries & Research Tools</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.15rem; color: #5a6c7d;">
+                    Explore our groundbreaking discoveries and the state-of-the-art equipment that makes our research possible.
+                </p>
+            </div>
+            
+            <h3 style="text-align: center; margin: 3rem 0 2rem; font-size: 1.8rem; font-weight: 300; color: #1a252f;">Featured Discoveries</h3>
+            <div class="showcase-grid" id="showcase-data"></div>
+            
+            <h3 style="text-align: center; margin: 4rem 0 2rem; font-size: 1.8rem; font-weight: 300; color: #1a252f;">Research Equipment</h3>
+            <div class="equipment-grid" id="equipment-list"></div>
+            
+            <div class="card" style="margin-top: 3rem; text-align: center; background: linear-gradient(135deg, #f5f7fa 0%, #e3e7ed 100%);">
+                <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">Funding & Recognition</h3>
+                <ul style="list-style: none; padding: 0; line-height: 2; font-size: 1.1rem; color: #5a6c7d;">
+                    <li>• Parker B. Francis Fellowship Recipient</li>
+                    <li>• Research featured as highlights in leading journals</li>
+                    <li>• Multi-institutional collaborative grants</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Activities Tab -->
+        <div id="activities" class="tab-content">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem;">Lab Activities</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.15rem; color: #5a6c7d;">
+                    Our lab's events, seminars, and outreach activities
+                </p>
+                <div class="activities-grid" id="activities-list"></div>
+            </div>
+        </div>
+
+        <!-- Contact Tab -->
+        <div id="contact" class="tab-content">
+            <div class="card">
+                <h2 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 2rem;">Contact Information</h2>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
+                    <div>
+                        <h3 style="font-size: 1.6rem; margin-bottom: 1.5rem; font-weight: 400;">Principal Investigator</h3>
+                        <div id="contact-pi-info"></div>
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-size: 1.6rem; margin-bottom: 1.5rem; font-weight: 400;">Laboratory Location</h3>
+                        <div id="lab-address"></div>
+                        
+                        <div style="margin-top: 2rem;">
+                            <h4 style="font-size: 1.2rem; margin-bottom: 1rem;">For Prospective Students and Postdocs:</h4>
+                            <p style="color: #5a6c7d;">Please send your CV and a brief statement of research interests to Dr. Vu.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="mailto:luan.vu@utsa.edu" class="link-button">Send Email</a>
+                    <a href="https://sciences.utsa.edu/mmi/" class="link-button" target="_blank">Visit UTSA</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title" style="font-size: 2rem; margin-bottom: 1rem;"></h2>
+            <p id="modal-description" style="font-size: 1.1rem; line-height: 1.8; color: #5a6c7d;"></p>
+            <img id="modal-diagram" class="project-diagram" src="" alt="Project Diagram" style="display: none;">
+            <div id="diagram-placeholder" style="background: #f0f0f0; height: 400px; display: flex; align-items: center; justify-content: center; color: #999; border-radius: 10px; margin: 2rem 0;">
+                Diagram will appear here
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p style="font-size: 1.1rem;">&copy; 2025 <span id="footer-lab-name"></span></p>
+        <p><span id="footer-university"></span></p>
+    </footer>
+    
+    <script>
+        // Populate the website with data from SITE_DATA
+        function populateWebsite() {
+            // Header
+            document.getElementById('lab-name').textContent = SITE_DATA.labName;
+            document.getElementById('department-name').textContent = SITE_DATA.department;
+            document.getElementById('university-name').textContent = SITE_DATA.university;
+            
+            // Lab Logo
+           {
+                document.getElementById('lab-logo-img').src = SITE_DATA.labLogo;
+                document.getElementById('lab-logo-img').style.display = 'block';
+                document.getElementById('lab-logo-placeholder').style.display = 'none';
+            }
+            
+            // Home page
+            document.getElementById('welcome-text').textContent = SITE_DATA.welcomeText;
+            document.getElementById('mission-text').innerHTML = SITE_DATA.missionText;
+            document.getElementById('pi-name').textContent = SITE_DATA.pi.name;
+            
+            // PI Photo
+            if (SITE_DATA.pi.photo && SITE_DATA.pi.photo !== "luan-vu-photo.jpg") {
+                document.getElementById('pi-photo').src = SITE_DATA.pi.photo;
+                document.getElementById('pi-photo').style.display = 'block';
+                document.getElementById('photo-placeholder').style.display = 'none';
+            }
+            
+            // Personal Statement - NEW: Replace contact info with personal statement
+            document.getElementById('personal-statement').innerHTML = SITE_DATA.pi.personalStatement;
+            
+            // PI Links
+            const linksHtml = `
+                <a href="${SITE_DATA.pi.linkedin}" class="link-button" target="_blank">LinkedIn</a>
+                <a href="${SITE_DATA.pi.ncbi}" class="link-button" target="_blank">NCBI Bibliography</a>
+                <a href="${SITE_DATA.pi.googleScholar}" class="link-button" target="_blank">Google Scholar</a>
+            `;
+            document.getElementById('pi-links').innerHTML = linksHtml;
+            
+            // Research questions
+            const questionsHtml = SITE_DATA.researchQuestions.map(q => `<li>${q}</li>`).join('');
+            document.getElementById('research-questions').innerHTML = questionsHtml;
+            
+            // Research projects
+            const projectsHtml = SITE_DATA.researchProjects.map(project => `
+                <div class="project-card" onclick="showProject('${project.id}')">
+                    <h3>${project.title}</h3>
+                    <p>${project.shortDescription}</p>
+                </div>
+            `).join('');
+            document.getElementById('research-projects').innerHTML = projectsHtml;
+            
+            // Team group photo
+            if (SITE_DATA.team.groupPhoto && SITE_DATA.team.groupPhoto !== "team-group-photo.jpg") {
+                document.getElementById('team-group-img').src = SITE_DATA.team.groupPhoto;
+                document.getElementById('team-group-img').style.display = 'block';
+                document.getElementById('group-photo-placeholder').style.display = 'none';
+            }
+            
+            // Team members
+            const teamHtml = SITE_DATA.team.members.map(member => `
+                <div class="team-member">
+                    <div class="member-photo">
+                        ${member.photo && member.photo !== member.photo.split('-')[0] + '-photo.jpg' 
+                            ? `<img src="${member.photo}" alt="${member.name}" style="object-position: ${member.photoPosition || 'center top'};">` 
+                            : `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #999;">Photo</div>`}
+                    </div>
+                    <h3>${member.name}</h3>
+                    <p class="position">${member.position}</p>
+                    <div class="details">
+                        <p><strong>Education:</strong> ${member.education}</p>
+                        <p><strong>Research:</strong> ${member.research}</p>
+                        <p><strong>Email:</strong> ${member.email}</p>
+                    </div>
+                </div>
+            `).join('');
+            document.getElementById('team-members').innerHTML = teamHtml;
+            
+            // Publications
+            const pubsHtml = SITE_DATA.publications.map(pub => `
+                <li style="margin-bottom: 2rem; padding: 1.5rem; background: #f8f9fa; border-left: 4px solid #3498db; border-radius: 8px;">
+                    <strong style="font-size: 1.1rem; color: #1a252f;">${pub.title}</strong><br>
+                    <em style="color: #5a6c7d;">${pub.journal}</em><br>
+                    <span style="color: #666;">Authors: ${pub.authors}</span>
+                    ${pub.doi ? `<br><a href="https://doi.org/${pub.doi}" target="_blank" style="color: #3498db; text-decoration: none;">DOI: ${pub.doi}</a>` : ''}
+                </li>
+            `).join('');
+            document.getElementById('publications-list').innerHTML = pubsHtml;
+            document.getElementById('publications-link').href = SITE_DATA.pi.ncbi;
+            
+            // Honors and Awards
+            const honorsHtml = SITE_DATA.honorsAndAwards.honors.map(honor => `
+                <div class="honor-item">
+                    <div class="honor-title">${honor.title}</div>
+                    <div class="honor-organization">${honor.organization}</div>
+                    <div class="honor-year">${honor.year}</div>
+                    <div class="honor-description">${honor.description}</div>
+                </div>
+            `).join('');
+            document.getElementById('honors-list').innerHTML = honorsHtml;
+            
+            const awardsHtml = SITE_DATA.honorsAndAwards.awards.map(award => `
+                <div class="award-item">
+                    <div class="award-title">${award.title}</div>
+                    <div class="award-organization">${award.organization}</div>
+                    <div class="award-year">${award.year}</div>
+                    <div class="award-description">${award.description}</div>
+                </div>
+            `).join('');
+            document.getElementById('awards-list').innerHTML = awardsHtml;
+            
+            // Media Coverage
+            const mediaHtml = SITE_DATA.honorsAndAwards.mediaCoverage.map(media => `
+                <div class="media-item">
+                    <div class="media-type">${media.type}</div>
+                    <div class="media-title">${media.title}</div>
+                    <div class="media-outlet">${media.outlet}</div>
+                    <div class="media-date">${media.date}</div>
+                    <div class="media-description">${media.description}</div>
+                    <a href="${media.link}" target="_blank" class="media-link">View Coverage</a>
+                </div>
+            `).join('');
+            document.getElementById('media-coverage-list').innerHTML = mediaHtml;
+            
+            // Showcase data
+            const showcaseHtml = SITE_DATA.showcase.data.map(item => `
+                <div class="showcase-item">
+                    <div class="showcase-image">
+                        ${item.image 
+                            ? `<img src="${item.image}" alt="${item.title}">` 
+                            : `<div style="color: #999;">Add Image</div>`}
+                    </div>
+                    <div class="showcase-content">
+                        <h3>${item.title}</h3>
+                        <p>${item.description}</p>
+                        <p style="font-size: 0.9rem; color: #888; margin-top: 0.5rem; font-style: italic;">${item.caption}</p>
+                    </div>
+                </div>
+            `).join('');
+            document.getElementById('showcase-data').innerHTML = showcaseHtml;
+            
+            // Equipment
+            const equipmentHtml = SITE_DATA.showcase.equipment.map(item => `
+                <div class="equipment-item">
+                    <div class="equipment-icon">
+                        ${item.image 
+                            ? `<img src="${item.image}" alt="${item.name}">` 
+                            : `<svg viewBox="0 0 100 100" style="width: 50px; height: 50px;">
+                                <rect x="20" y="30" width="60" height="40" fill="#3498db" opacity="0.8"/>
+                                <circle cx="35" cy="50" r="8" fill="#2c3e50"/>
+                                <circle cx="65" cy="50" r="8" fill="#2c3e50"/>
+                               </svg>`}
+                    </div>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #1a252f;">${item.name}</h4>
+                    <p style="font-size: 0.95rem; color: #5a6c7d;">${item.description}</p>
+                </div>
+            `).join('');
+            document.getElementById('equipment-list').innerHTML = equipmentHtml;
+            
+            // Add this to your populateWebsite() function
+            const activitiesHtml = SITE_DATA.activities.map(activity => `
+                <div class="activity-card">
+                    <img src="${activity.image}" alt="${activity.title}" class="activity-image">
+                    <div class="activity-content">
+                        <h3>${activity.title}</h3>
+                        <div class="activity-date">${activity.date}</div>
+                        <div class="activity-location">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            ${activity.location}
+                        </div>
+                        <p>${activity.description}</p>
+                    </div>
+                </div>
+            `).join('');
+            document.getElementById('activities-list').innerHTML = activitiesHtml;
+
+            // Contact page
+            const contactHtml = `
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    <strong>${SITE_DATA.pi.name}</strong><br>
+                    ${SITE_DATA.pi.title}<br>
+                    ${SITE_DATA.department}<br>
+                    ${SITE_DATA.university}
+                </p>
+                <div style="margin-top: 1.5rem; background: #f8f9fa; padding: 1.5rem; border-radius: 10px;">
+                    <p><strong>Email:</strong> ${SITE_DATA.pi.email}</p>
+                    <p><strong>Phone:</strong> ${SITE_DATA.pi.phone}</p>
+                    <p><strong>Office:</strong> ${SITE_DATA.pi.office}</p>
+                </div>
+            `;
+            document.getElementById('contact-pi-info').innerHTML = contactHtml;
+            
+            const addressHtml = `
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    ${SITE_DATA.address.building}<br>
+                    ${SITE_DATA.department}<br>
+                    ${SITE_DATA.university}<br>
+                    ${SITE_DATA.address.street}<br>
+                    ${SITE_DATA.address.city}, ${SITE_DATA.address.state} ${SITE_DATA.address.zip}
+                </p>
+            `;
+            document.getElementById('lab-address').innerHTML = addressHtml;
+            
+            // Footer
+            document.getElementById('footer-lab-name').textContent = SITE_DATA.labName;
+            document.getElementById('footer-university').textContent = SITE_DATA.university;
+        }
+        
+        // Tab switching function
+        function showTab(tabName) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        // Show project modal
+        function showProject(projectId) {
+            const project = SITE_DATA.researchProjects.find(p => p.id === projectId);
+            if (project) {
+                document.getElementById('modal-title').textContent = project.title;
+                document.getElementById('modal-description').innerHTML = project.fullDescription;
+                
+                if (project.diagram && project.diagram !== project.id + '-diagram.png') {
+                    document.getElementById('modal-diagram').src = project.diagram;
+                    document.getElementById('modal-diagram').style.display = 'block';
+                    document.getElementById('diagram-placeholder').style.display = 'none';
+                } else {
+                    document.getElementById('modal-diagram').style.display = 'none';
+                    document.getElementById('diagram-placeholder').style.display = 'flex';
+                }
+                
+                document.getElementById('projectModal').style.display = 'block';
+            }
+        }
+        
+        // Close modal
+        function closeModal() {
+            document.getElementById('projectModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('projectModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+        // Initialize the website
+        populateWebsite();
+    </script>
+</body>
+</html>
