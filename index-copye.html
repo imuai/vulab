@@ -534,12 +534,6 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
             zip: "78249"
         }
     };
-    // ADMIN CREDENTIALS - Easy to change
-    const ADMIN_CONFIG = {
-        username: 'luanvu',
-        password: 'Vinamilk@((091984',
-        sessionTimeout: 30 // minutes
-    };
 
     </script>
     <!-- 
@@ -562,282 +556,6 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
             background-color: #f5f7fa;
         }
         
-        /* Admin Login Button in Corner */
-        .admin-corner-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 9999;
-            background: linear-gradient(135deg, #e74c3c, #c0392b);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
-            box-shadow: 0 4px 20px rgba(231, 76, 60, 0.3);
-            transition: all 0.3s ease;
-            letter-spacing: 0.5px;
-        }
-        
-        .admin-corner-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(231, 76, 60, 0.4);
-        }
-        
-        .admin-corner-btn.logged-in {
-            background: linear-gradient(135deg, #27ae60, #2ecc71);
-            box-shadow: 0 4px 20px rgba(39, 174, 96, 0.3);
-        }
-        
-        .admin-corner-btn.logged-in:hover {
-            box-shadow: 0 6px 25px rgba(39, 174, 96, 0.4);
-        }
-        
-        /* Login Modal Styles */
-        .login-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 10000;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .login-modal.show {
-            display: flex;
-        }
-        
-        .login-modal-content {
-            background: white;
-            border-radius: 20px;
-            padding: 3rem;
-            width: 90%;
-            max-width: 450px;
-            position: relative;
-            animation: modalSlideIn 0.3s ease;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-        
-        @keyframes modalSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-30px) scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-        
-        .close-login-modal {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            color: #666;
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        
-        .close-login-modal:hover {
-            background: #f0f0f0;
-            color: #333;
-        }
-        
-        .login-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .login-header h3 {
-            font-size: 1.8rem;
-            color: #1a252f;
-            margin-bottom: 0.5rem;
-            font-weight: 400;
-        }
-        
-        .login-header p {
-            color: #5a6c7d;
-            font-size: 1rem;
-        }
-        
-        .login-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-        
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .form-group label {
-            font-weight: 500;
-            color: #1a252f;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-        
-        .form-group input {
-            padding: 1rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            background: #f9f9f9;
-        }
-        
-        .form-group input:focus {
-            outline: none;
-            border-color: #3498db;
-            background: white;
-            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
-        }
-        
-        .login-btn {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            letter-spacing: 0.5px;
-            margin-top: 1rem;
-        }
-        
-        .login-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
-        }
-        
-        .login-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-            transform: none;
-        }
-        
-        .login-error {
-            color: #e74c3c;
-            font-size: 0.9rem;
-            text-align: center;
-            margin-top: 1rem;
-            padding: 0.75rem;
-            background: #fdf2f2;
-            border-radius: 8px;
-            border: 1px solid #f5c6cb;
-            display: none;
-        }
-        
-        .security-notice {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 10px;
-            margin-top: 1.5rem;
-            font-size: 0.85rem;
-            color: #666;
-            border-left: 4px solid #3498db;
-        }
-        
-        /* Photo Upload Areas - Hidden by default */
-        .photo-upload-area {
-            display: none;
-            background: #f0f8ff;
-            border: 2px dashed #3498db;
-            border-radius: 10px;
-            padding: 2rem;
-            text-align: center;
-            margin: 1rem 0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .photo-upload-area.admin-logged-in {
-            display: block;
-        }
-        
-        .photo-upload-area:hover {
-            background: #e8f4f8;
-            border-color: #2980b9;
-        }
-        
-        .upload-icon {
-            font-size: 3rem;
-            color: #3498db;
-            margin-bottom: 1rem;
-        }
-        
-        .upload-text {
-            color: #2c3e50;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-        
-        /* Add Photo Buttons */
-        .add-photo-btn {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 0.5rem;
-        }
-        
-        .add-photo-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
-        }
-        
-        /* Notification System */
-        .notification {
-            position: fixed;
-            top: 80px;
-            right: 20px;
-            padding: 1rem 1.5rem;
-            border-radius: 10px;
-            color: white;
-            font-weight: 500;
-            z-index: 9998;
-            min-width: 300px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-            animation: slideInRight 0.3s ease;
-        }
-        
-        @keyframes slideInRight {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        
-        .notification.success { background: #27ae60; }
-        .notification.error { background: #e74c3c; }
-        .notification.warning { background: #f39c12; }
-        .notification.info { background: #3498db; }
 
         /* Sophisticated Header */
         header {
@@ -1627,7 +1345,6 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
             overflow: hidden;
             box-shadow: 0 5px 30px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
-            position: relative;
         }
 
         .activity-card:hover {
@@ -1698,11 +1415,9 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
         
         /* Responsive Design */
         @media (max-width: 768px) {
-            .admin-corner-btn {
-                top: 10px;
-                right: 10px;
-                padding: 0.5rem 1rem;
-                font-size: 0.8rem;
+            .header-content {
+                flex-direction: column;
+                text-align: center;
             }
             
             .header-text h1 {
@@ -1738,55 +1453,10 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
             .media-grid {
                 grid-template-columns: 1fr;
             }
-            .login-modal-content {
-                margin: 10% auto;
-                padding: 2rem;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Admin Login Button in Corner -->
-    <button id="adminCornerBtn" class="admin-corner-btn" onclick="toggleAdminLogin()">
-        🔐 Admin Login
-    </button>
-    
-    <!-- Login Modal -->
-    <div id="loginModal" class="login-modal">
-        <div class="login-modal-content">
-            <button class="close-login-modal" onclick="closeLoginModal()">×</button>
-            
-            <div class="login-header">
-                <h3>🔐 Admin Access</h3>
-                <p>Login required to upload and manage photos</p>
-            </div>
-            
-            <form class="login-form" onsubmit="handleAdminLogin(event)">
-                <div class="form-group">
-                    <label for="adminUsername">Username</label>
-                    <input type="text" id="adminUsername" required autocomplete="username">
-                </div>
-                
-                <div class="form-group">
-                    <label for="adminPassword">Password</label>
-                    <input type="password" id="adminPassword" required autocomplete="current-password">
-                </div>
-                
-                <button type="submit" class="login-btn" id="loginSubmitBtn">
-                    🔑 Login
-                </button>
-                
-                <div id="loginError" class="login-error"></div>
-            </form>
-            
-            <div class="security-notice">
-                <strong>🛡️ Security Notice:</strong><br>
-                • Only authorized personnel can upload photos<br>
-                • All login attempts are logged and monitored<br>
-                • Session expires after 30 minutes of inactivity
-            </div>
-        </div>
-    </div>
     <header>
         <div class="header-content">
             <div class="lab-logo">
@@ -1880,8 +1550,6 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
                     <img id="team-group-img" src="" alt="Team Group Photo" style="display: none;">
                     <div id="group-photo-placeholder" style="background: #f0f0f0; height: 400px; display: flex; align-items: center; justify-content: center; color: #999;">
                         Add Group Photo
-                        <button class="add-photo-btn" onclick="requestPhotoUpload('team-group')">📷 Add Photo</button>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -1994,12 +1662,6 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
                 <p style="margin-bottom: 2rem; font-size: 1.15rem; color: #5a6c7d;">
                     Our lab's events, seminars, and outreach activities
                 </p>
-                <!-- Photo Upload Area for Activities (Only visible when admin logged in) -->
-                <div class="photo-upload-area" id="activityUploadArea">
-                    <div class="upload-icon">📷</div>
-                    <div class="upload-text">Click or drag photos here to add lab activity images</div>
-                    <button class="add-photo-btn" onclick="requestPhotoUpload('activity')">Add Activity Photos</button>
-                </div>
                 <div class="activities-grid" id="activities-list"></div>
             </div>
         </div>
@@ -2053,198 +1715,6 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
     </footer>
     
     <script>
-        // Admin authentication system
-        let isAdminLoggedIn = false;
-        let sessionTimeout;
-        
-        // Show notification
-        function showNotification(message, type = 'info') {
-            const existingNotification = document.querySelector('.notification');
-            if (existingNotification) {
-                existingNotification.remove();
-            }
-            
-            const notification = document.createElement('div');
-            notification.className = `notification ${type}`;
-            notification.textContent = message;
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                if (notification.parentNode) {
-                    notification.style.animation = 'slideOutRight 0.3s ease forwards';
-                    setTimeout(() => notification.remove(), 300);
-                }
-            }, 4000);
-        }
-        
-        // Toggle admin login modal
-        function toggleAdminLogin() {
-            if (isAdminLoggedIn) {
-                adminLogout();
-            } else {
-                document.getElementById('loginModal').classList.add('show');
-            }
-        }
-        
-        // Close login modal
-        function closeLoginModal() {
-            document.getElementById('loginModal').classList.remove('show');
-            document.getElementById('loginError').style.display = 'none';
-        }
-        
-        // Handle admin login
-        function handleAdminLogin(event) {
-            event.preventDefault();
-            
-            const username = document.getElementById('adminUsername').value;
-            const password = document.getElementById('adminPassword').value;
-            
-            if (username === ADMIN_CONFIG.username && password === ADMIN_CONFIG.password) {
-                isAdminLoggedIn = true;
-                
-                // Update UI
-                updateAdminUI(true);
-                closeLoginModal();
-                
-                // Set session timeout
-                setSessionTimeout();
-                
-                showNotification(`✅ Welcome, ${username}! Admin access granted.`, 'success');
-                
-                // Clear form
-                document.getElementById('adminUsername').value = '';
-                document.getElementById('adminPassword').value = '';
-                document.getElementById('loginError').style.display = 'none';
-                
-            } else {
-                // Show error
-                const errorDiv = document.getElementById('loginError');
-                errorDiv.textContent = '❌ Invalid credentials. Please try again.';
-                errorDiv.style.display = 'block';
-                
-                // Clear password field
-                document.getElementById('adminPassword').value = '';
-                
-                showNotification('❌ Invalid login credentials', 'error');
-            }
-        }
-        
-        // Admin logout
-        function adminLogout() {
-            isAdminLoggedIn = false;
-            updateAdminUI(false);
-            
-            if (sessionTimeout) {
-                clearTimeout(sessionTimeout);
-            }
-            
-            showNotification('🔒 Admin logged out successfully', 'info');
-        }
-        
-        // Update admin UI
-        function updateAdminUI(loggedIn) {
-            const cornerBtn = document.getElementById('adminCornerBtn');
-            const uploadArea = document.getElementById('activityUploadArea');
-            
-            if (loggedIn) {
-                cornerBtn.textContent = '👤 Admin Logout';
-                cornerBtn.classList.add('logged-in');
-                if (uploadArea) {
-                    uploadArea.classList.add('admin-logged-in');
-                }
-            } else {
-                cornerBtn.textContent = '🔐 Admin Login';
-                cornerBtn.classList.remove('logged-in');
-                if (uploadArea) {
-                    uploadArea.classList.remove('admin-logged-in');
-                }
-            }
-        }
-        
-        // Set session timeout
-        function setSessionTimeout() {
-            if (sessionTimeout) {
-                clearTimeout(sessionTimeout);
-            }
-            
-            sessionTimeout = setTimeout(() => {
-                if (isAdminLoggedIn) {
-                    adminLogout();
-                    showNotification('⏰ Session expired due to inactivity', 'warning');
-                }
-            }, ADMIN_CONFIG.sessionTimeout * 60 * 1000);
-        }
-        
-        // Request photo upload (triggers login if not logged in)
-        function requestPhotoUpload(type) {
-            if (!isAdminLoggedIn) {
-                showNotification('🔐 Admin access required', 'error');
-                return;
-                }
-                // Create file input for photo upload
-                const fileInput = document.createElement('input');
-                fileInput.type = 'file';
-                fileInput.accept = 'image/*';
-                fileInput.multiple = true;
-                fileInput.onchange = function(event) {
-                const files = event.target.files;
-                if (files.length > 0) {
-                    handlePhotoUpload(files, type);
-                }
-            };
-        
-            fileInput.click();
-        }
-        // Handle photo upload
-        function handlePhotoUpload(files, type) {
-            if (!isAdminLoggedIn) {
-                showNotification('🔐 Admin access required', 'error');
-                return;
-            }
-            const fileArray = Array.from(files);
-            const validFiles = fileArray.filter(file => {
-                const isValidType = file.type.startsWith('image/');
-                const isValidSize = file.size <= 5 * 1024 * 1024; // 5MB
-                if (!isValidType) {
-                showNotification(`❌ ${file.name} is not a valid image file`, 'error');
-                }
-                if (!isValidSize) {
-                showNotification(`❌ ${file.name} is too large (max 5MB)`, 'error');
-                }
-                return isValidType && isValidSize;
-            });
-
-            if (validFiles.length === 0) {
-                showNotification('❌ No valid files to upload', 'error');
-                return;
-            }
-            // Simulate upload process
-            showNotification(`📤 Uploading ${validFiles.length} photo(s)...`, 'info');
-            setTimeout(() => {
-                showNotification(`✅ Successfully uploaded ${validFiles.length} photos to ${type} section!`, 'success');
-
-                // Reset session timeout
-                setSessionTimeout();
-                // In a real implementation, you would:
-                // 1. Upload files to server
-                // 2. Update database
-                // 3. Refresh the gallery
-                console.log(`Admin uploaded ${validFiles.length} files to ${type} at ${new Date().toISOString()}`);
-                
-            }, 2000);
-        }
-
-        // Extend session on user activity
-        function extendSession() {
-            if (isAdminLoggedIn) {
-                setSessionTimeout();
-            }
-        }
-        
-        // Add event listeners for session extension
-        document.addEventListener('click', extendSession);
-        document.addEventListener('keypress', extendSession);
-
         // Populate the website with data from SITE_DATA
         function populateWebsite() {
             // Header
@@ -2308,9 +1778,7 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
                     <div class="member-photo">
                         ${member.photo && member.photo !== member.photo.split('-')[0] + '-photo.jpg' 
                             ? `<img src="${member.photo}" alt="${member.name}" style="object-position: ${member.photoPosition || 'center top'};">` 
-                            : `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #999;">
-                                <div>Photo<br><button class="add-photo-btn" onclick="requestPhotoUpload('team-${member.name.replace(/\s+/g, '-').toLowerCase()}')">📷 Add</button></div>
-                                </div>`}
+                            : `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #999;">Photo</div>`}
                     </div>
                     <h3>${member.name}</h3>
                     <p class="position">${member.position}</p>
@@ -2405,16 +1873,10 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
             `).join('');
             document.getElementById('equipment-list').innerHTML = equipmentHtml;
             
-            // Activities
-            const activitiesHtml = SITE_DATA.activities.map((activity, index) => `
+            // Add this to your populateWebsite() function
+            const activitiesHtml = SITE_DATA.activities.map(activity => `
                 <div class="activity-card">
-                    <img src="${activity.image}" alt="${activity.title}" class="activity-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div style="display: none; height: 200px; background: #f0f0f0; align-items: center; justify-content: center; color: #999;">
-                        <div>
-                            <div>Photo not found</div>
-                            <button class="add-photo-btn" onclick="requestPhotoUpload('activity-${index}')">📷 Add Photo</button>
-                        </div>
-                    </div>
+                    <img src="${activity.image}" alt="${activity.title}" class="activity-image">
                     <div class="activity-content">
                         <h3>${activity.title}</h3>
                         <div class="activity-date">${activity.date}</div>
@@ -2423,7 +1885,6 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
                             ${activity.location}
                         </div>
                         <p>${activity.description}</p>
-                        <button class="add-photo-btn" onclick="requestPhotoUpload('activity-${index}-additional')" style="margin-top: 1rem;">📷 Add More Photos</button>
                     </div>
                 </div>
             `).join('');
@@ -2512,12 +1973,6 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
         
         // Initialize the website
         populateWebsite();
-        // Initialize admin UI
-        updateAdminUI(false);
-        
-        console.log('🔐 Admin System Initialized');
-        console.log('Username:', ADMIN_CONFIG.username);
-        console.log('Session timeout:', ADMIN_CONFIG.sessionTimeout, 'minutes');
     </script>
 </body>
 </html>
