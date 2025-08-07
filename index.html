@@ -505,32 +505,28 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
         // LAB ACTIVITIES
         activities: [
             {
-            title: "Pacific Basin Consortium 2025",
-            date: "05/29/2025",
-            location: "Ho Chi Minh city, Viet Nam",
-            description: "PBC 2025 for Enviroment and Health International Conference.",
-            image: "20-IMG_2126.jpg"
+                id: "activity1",
+                title: "Pacific Basin Consortium 2025",
+                date: "05/29/2025",
+                location: "Ho Chi Minh city, Viet Nam",
+                description: "PBC 2025 for Environment and Health International Conference.",
+                images: ["20-IMG_2126.jpg", "73-_MG_2100.jpg", "5-IMG_2234.jpg"]
             },
             {
-            title: "Pacific Basin Consortium 2025",
-            date: "05/30/2025",
-            location: "Ho Chi Minh city, Viet Nam",
-            description: "PBC 2025 for Enviroment and Health International Conference.",
-            image: "73-_MG_2100.jpg"
+                id: "activity2",
+                title: "Lab Lunch",
+                date: "07/25/2025",
+                location: "San Antonio, USA",
+                description: "Great time with the Lab team at a local restaurant.",
+                images: ["lab lunch-1.jpeg"]
             },
+
             {
-            title: "Pacific Basin Consortium 2025",
-            date: "06/01/2025",
-            location: "Ho Chi Minh city, Viet Nam",
-            description: "PBC 2025 for Enviroment and Health International Conference.",
-            image: "5-IMG_2234.jpg"
-            },
-            {
-            title: "Lab Lunch",
-            date: "07/25/2025",
+            title: "Lab Photo Shoot",
+            date: "08/06/2025",
             location: "San Antonio, USA",
-            description: "Great time with the Lab team at a local restaurant.",
-            image: "lab lunch-1.jpeg"
+            description: "Lab Life Unfiltered",
+            image: ["diva1.jpg","diva2.jpg"]
             }
         ],
         // LAB ADDRESS
@@ -1462,6 +1458,74 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Activity Modal Styles - ADD THIS BEFORE </style> */
+        .activity-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+
+        .activity-modal-content {
+            background: white;
+            margin: 2% auto;
+            padding: 2rem;
+            width: 95%;
+            max-width: 1000px;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .close-activity-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+
+        .close-activity-modal:hover {
+            color: #333;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .photo-count {
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -1715,7 +1779,12 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
             </div>
         </div>
     </div>
-    
+    <!-- Activity Modal -->
+    <div id="activityModal" class="activity-modal">
+        <!-- Content will be populated by JavaScript -->
+    </div>
+
+
     <footer>
         <p style="font-size: 1.1rem;">&copy; 2025 <span id="footer-lab-name"></span></p>
         <p><span id="footer-university"></span></p>
@@ -1883,8 +1952,8 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
             
             // Add this to your populateWebsite() function
             const activitiesHtml = SITE_DATA.activities.map(activity => `
-                <div class="activity-card">
-                    <img src="${activity.image}" alt="${activity.title}" class="activity-image">
+                <div class="activity-card" onclick="showActivityGallery('${activity.id}')">
+                    <img src="${activity.images ? activity.images[0] : activity.image}" alt="${activity.title}" class="activity-image">
                     <div class="activity-content">
                         <h3>${activity.title}</h3>
                         <div class="activity-date">${activity.date}</div>
@@ -1893,6 +1962,7 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
                             ${activity.location}
                         </div>
                         <p>${activity.description}</p>
+                        <p class="photo-count">${activity.images ? activity.images.length : 1} photos</p>
                     </div>
                 </div>
             `).join('');
@@ -1974,13 +2044,48 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
         // Close modal when clicking outside
         window.onclick = function(event) {
             const modal = document.getElementById('projectModal');
+            const activityModal = document.getElementById('activityModal');
             if (event.target == modal) {
                 modal.style.display = 'none';
+            }
+            if (event.target == activityModal) {
+                activityModal.style.display = 'none';
             }
         }
         
         // Initialize the website
         populateWebsite();
+        // Activity Gallery Functions
+        function showActivityGallery(activityId) {
+            const activity = SITE_DATA.activities.find(a => a.id === activityId);
+            if (!activity) return;
+            
+            const images = activity.images || [activity.image];
+            const galleryHtml = images.map(image => `
+                <div class="gallery-image">
+                    <img src="${image}" alt="${activity.title}">
+                </div>
+            `).join('');
+            
+            const modalHtml = `
+                <div class="activity-modal-content">
+                    <span class="close-activity-modal" onclick="closeActivityModal()">&times;</span>
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #1a252f;">${activity.title}</h2>
+                    <p style="color: #3498db; margin-bottom: 1.5rem; font-size: 1.1rem;">${activity.date} • ${activity.location}</p>
+                    <p style="color: #5a6c7d; font-size: 1.1rem; line-height: 1.6;">${activity.description}</p>
+                    <div class="photo-gallery">
+                        ${galleryHtml}
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('activityModal').innerHTML = modalHtml;
+            document.getElementById('activityModal').style.display = 'block';
+        }
+
+        function closeActivityModal() {
+            document.getElementById('activityModal').style.display = 'none';
+        }
     </script>
 </body>
 </html>
