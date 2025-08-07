@@ -520,7 +520,6 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
                 description: "Great time with the Lab team at a local restaurant.",
                 images: ["lab lunch-1.jpeg"]
             },
-
             {
             title: "Lab Photo Shoot",
             date: "08/06/2025",
@@ -1459,7 +1458,8 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
             }
         }
 
-        /* Activity Modal Styles - ADD THIS BEFORE </style> */
+        /* Activity Modal - 2 Column Grid */
+        /* Activity Modal - 2 Column Grid */
         .activity-modal {
             display: none;
             position: fixed;
@@ -1474,22 +1474,23 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
 
         .activity-modal-content {
             background: white;
-            margin: 2% auto;
-            padding: 2rem;
-            width: 95%;
-            max-width: 1000px;
+            margin: 3% auto;
+            padding: 3rem;
+            width: 90%;
+            max-width: 900px;
             border-radius: 15px;
             position: relative;
         }
 
         .close-activity-modal {
             position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 2rem;
+            top: 1.5rem;
+            right: 2rem;
+            font-size: 2.5rem;
             cursor: pointer;
             color: #666;
             transition: color 0.3s ease;
+            z-index: 1;
         }
 
         .close-activity-modal:hover {
@@ -1498,8 +1499,8 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
 
         .photo-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
             margin-top: 2rem;
         }
 
@@ -1511,13 +1512,27 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
         }
 
         .gallery-image:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
 
         .gallery-image img {
             width: 100%;
-            height: 200px;
+            height: 250px;
             object-fit: cover;
+            display: block;
+        }
+
+        /* Responsive: 1 column on mobile */
+        @media (max-width: 768px) {
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .activity-modal-content {
+                width: 95%;
+                padding: 2rem;
+                margin: 5% auto;
+            }
         }
 
         .photo-count {
@@ -2061,18 +2076,19 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
             if (!activity) return;
             
             const images = activity.images || [activity.image];
-            const galleryHtml = images.map(image => `
+            const galleryHtml = images.map((image, index) => `
                 <div class="gallery-image">
-                    <img src="${image}" alt="${activity.title}">
+                    <img src="${image}" alt="${activity.title} - Photo ${index + 1}">
                 </div>
             `).join('');
             
             const modalHtml = `
                 <div class="activity-modal-content">
                     <span class="close-activity-modal" onclick="closeActivityModal()">&times;</span>
-                    <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #1a252f;">${activity.title}</h2>
-                    <p style="color: #3498db; margin-bottom: 1.5rem; font-size: 1.1rem;">${activity.date} • ${activity.location}</p>
-                    <p style="color: #5a6c7d; font-size: 1.1rem; line-height: 1.6;">${activity.description}</p>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem; color: #1a252f;">${activity.title}</h2>
+                    <p style="color: #3498db; margin-bottom: 0.5rem; font-size: 1.1rem;">${activity.date} • ${activity.location}</p>
+                    <p style="color: #5a6c7d; font-size: 1.05rem; line-height: 1.6; margin-bottom: 1rem;">${activity.description}</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;">${images.length} photos</p>
                     <div class="photo-gallery">
                         ${galleryHtml}
                     </div>
