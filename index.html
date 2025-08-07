@@ -526,7 +526,7 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
                 date: "08/06/2025",
                 location: "San Antonio, USA",
                 description: "Lab Life Unfiltered",
-                image: ["diva1.jpg","diva2.jpg"]
+                images: ["diva1.jpg", "diva2.jpg"]
             }
         ],
         // LAB ADDRESS
@@ -1517,10 +1517,11 @@ This project uncovers how air pollution particles impair FcRn-mediated transplac
         }
 
         .gallery-image img {
-            width: 150%;
-            height: 375px;
-            object-fit: cover;
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
             display: block;
+            background: #f8f9fa;  
         }
 
         /* Responsive: 1 column on mobile */
